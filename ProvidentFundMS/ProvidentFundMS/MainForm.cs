@@ -21,20 +21,14 @@ namespace ProvidentFundMS
 
         private void addEnterprise_btn_Click(object sender, EventArgs e)
         {
-            AddEnterpriseForm addEnterpriseForm = new AddEnterpriseForm();
-            addEnterpriseForm.Show();
+            EnterpriseInfoManageForm enterpriseInfoManageForm = new EnterpriseInfoManageForm();
+            enterpriseInfoManageForm.ShowDialog();
         }
 
         private void enterpriseIEM_btn_Click(object sender, EventArgs e)
         {
             EnterpriseIEMForm enterpriseIEMForm = new EnterpriseIEMForm();
-            enterpriseIEMForm.Show();
-        }
-
-        private void enterpriseInfoSearch_btn_Click(object sender, EventArgs e)
-        {
-            EnterpriseInfoForm enterpriseInfoForm = new EnterpriseInfoForm();
-            enterpriseInfoForm.Show();
+            enterpriseIEMForm.ShowDialog();
         }
     }
 }

@@ -57,17 +57,23 @@
     <Compile Include="AddEnterprise.Designer.cs">
       <DependentUpon>AddEnterprise.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnterpriseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterpriseDetailForm.Designer.cs">
+      <DependentUpon>EnterpriseDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnterpriseIEMForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EnterpriseIEMForm.Designer.cs">
       <DependentUpon>EnterpriseIEMForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnterpriseInfoForm.cs">
+    <Compile Include="EnterpriseInfoManageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnterpriseInfoForm.Designer.cs">
-      <DependentUpon>EnterpriseInfoForm.cs</DependentUpon>
+    <Compile Include="EnterpriseInfoManageForm.Designer.cs">
+      <DependentUpon>EnterpriseInfoManageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -86,11 +92,14 @@
     <EmbeddedResource Include="AddEnterprise.resx">
       <DependentUpon>AddEnterprise.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EnterpriseDetailForm.resx">
+      <DependentUpon>EnterpriseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnterpriseIEMForm.resx">
       <DependentUpon>EnterpriseIEMForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnterpriseInfoForm.resx">
-      <DependentUpon>EnterpriseInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="EnterpriseInfoManageForm.resx">
+      <DependentUpon>EnterpriseInfoManageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
