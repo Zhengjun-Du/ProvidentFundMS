@@ -74,7 +74,7 @@
             this.enterpriseName_textbox.Location = new System.Drawing.Point(319, 93);
             this.enterpriseName_textbox.Name = "enterpriseName_textbox";
             this.enterpriseName_textbox.Size = new System.Drawing.Size(387, 29);
-            this.enterpriseName_textbox.TabIndex = 4;
+            this.enterpriseName_textbox.TabIndex = 1;
             // 
             // label3
             // 
@@ -93,7 +93,7 @@
             this.licence_textbox.Location = new System.Drawing.Point(319, 147);
             this.licence_textbox.Name = "licence_textbox";
             this.licence_textbox.Size = new System.Drawing.Size(387, 29);
-            this.licence_textbox.TabIndex = 4;
+            this.licence_textbox.TabIndex = 2;
             // 
             // label4
             // 
@@ -112,7 +112,7 @@
             this.corporation_textbox.Location = new System.Drawing.Point(319, 201);
             this.corporation_textbox.Name = "corporation_textbox";
             this.corporation_textbox.Size = new System.Drawing.Size(387, 29);
-            this.corporation_textbox.TabIndex = 4;
+            this.corporation_textbox.TabIndex = 3;
             // 
             // label5
             // 
@@ -150,7 +150,7 @@
             this.provident_found_textbox.Location = new System.Drawing.Point(319, 317);
             this.provident_found_textbox.Name = "provident_found_textbox";
             this.provident_found_textbox.Size = new System.Drawing.Size(387, 29);
-            this.provident_found_textbox.TabIndex = 4;
+            this.provident_found_textbox.TabIndex = 5;
             // 
             // label7
             // 
@@ -169,7 +169,7 @@
             this.telnumber_textbox.Location = new System.Drawing.Point(319, 380);
             this.telnumber_textbox.Name = "telnumber_textbox";
             this.telnumber_textbox.Size = new System.Drawing.Size(387, 29);
-            this.telnumber_textbox.TabIndex = 4;
+            this.telnumber_textbox.TabIndex = 6;
             // 
             // label8
             // 
@@ -197,7 +197,7 @@
             this.reset_btn.Name = "reset_btn";
             this.reset_btn.Size = new System.Drawing.Size(174, 48);
             this.reset_btn.TabIndex = 6;
-            this.reset_btn.Text = "重置";
+            this.reset_btn.Text = "退出";
             this.reset_btn.UseVisualStyleBackColor = true;
             this.reset_btn.Click += new System.EventHandler(this.reset_btn_Click);
             // 

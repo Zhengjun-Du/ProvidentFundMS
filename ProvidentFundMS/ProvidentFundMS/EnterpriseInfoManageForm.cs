@@ -26,12 +26,14 @@ namespace ProvidentFundMS
             this.EnterPriseInfoListView.FullRowSelect = true;
 
             sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
-            myConn = new OleDbConnection(sqlConn);
-            myConn.Open();
+            myConn  = new OleDbConnection(sqlConn);
         }
 
-        private void InsertDataOfListView()
+        private void UpdateDataOfListView()
         {
+            this.EnterPriseInfoListView.Items.Clear();
+
+            myConn.Open();
             String selcet_sql = "select * from enterprise";
             OleDbCommand myComm = new OleDbCommand(selcet_sql, myConn);
             OleDbDataReader myReader = myComm.ExecuteReader();
@@ -45,25 +47,23 @@ namespace ProvidentFundMS
                 lvi.SubItems.Add(myReader[4].ToString());
                 lvi.SubItems.Add(myReader[5].ToString());
                 lvi.SubItems.Add(myReader[6].ToString());
-
                 this.EnterPriseInfoListView.Items.Add(lvi);
             }
-            this.EnterPriseInfoListView.Refresh();
+
             myReader.Close();
+            myConn.Close();
         }
 
         private void EnterpriseInfoManageForm_Load(object sender, EventArgs e)
         {
-            InsertDataOfListView();
+            UpdateDataOfListView();
         }
 
         private void addEnterprise_btn_Click(object sender, EventArgs e)
         {
             AddEnterpriseForm addEnterpriseForm = new AddEnterpriseForm();
             addEnterpriseForm.ShowDialog();
-            this.EnterPriseInfoListView.Items.Clear();
-            InsertDataOfListView();
-            this.EnterPriseInfoListView.Invalidate();
+            UpdateDataOfListView();
         }
 
         private void modify_enterpriseinfo_menu_Click(object sender, EventArgs e)
@@ -73,6 +73,7 @@ namespace ProvidentFundMS
                 ModifyEnterpriseForm modifyEnterpriseForm = new ModifyEnterpriseForm();
                 modifyEnterpriseForm.display_content = this.EnterPriseInfoListView.SelectedItems[0];
                 modifyEnterpriseForm.ShowDialog();
+                UpdateDataOfListView();
             }
         }
 
@@ -86,10 +87,14 @@ namespace ProvidentFundMS
                 DialogResult dr = MessageBox.Show("确认删除吗？", "提示", MessageBoxButtons.OKCancel);
                 if (dr == DialogResult.OK)
                 {
+                    myConn.Open();
                     String delete_sql = "DELETE FROM enterprise WHERE [enterprise_name] = '" + enterprise_name + "'";
                     OleDbCommand myComm = new OleDbCommand(delete_sql, myConn);
                     myComm.ExecuteNonQuery();
+                    myConn.Close();
                 }
+ 
+                UpdateDataOfListView();
             }
         }
     }

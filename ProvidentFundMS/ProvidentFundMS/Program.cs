@@ -17,14 +17,16 @@ namespace ProvidentFundMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-           // Application.Run(new MainForm());
+            Application.Run(new MainForm());
 
+            /*
             LoginForm loginForm = new LoginForm();
             DialogResult isOk = loginForm.ShowDialog();
             if (isOk == DialogResult.OK)
             {
                 Application.Run(new MainForm());
             }
+             * */
         }
     }
 }

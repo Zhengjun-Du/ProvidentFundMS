@@ -45,12 +45,7 @@ namespace ProvidentFundMS
 
         private void reset_btn_Click(object sender, EventArgs e)
         {
-            this.enterpriseName_textbox.Clear();
-            this.licence_textbox.Clear();
-            this.corporation_textbox.Clear();
-            this.enterprise_addr_textbox.Clear();
-            this.provident_found_textbox.Clear();
-            this.telnumber_textbox.Clear();
+            this.Close();
         }
     }
 }
