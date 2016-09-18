@@ -63,6 +63,11 @@
     <Compile Include="AddEnterprise.Designer.cs">
       <DependentUpon>AddEnterprise.cs</DependentUpon>
     </Compile>
+    <Compile Include="database\ProvidentFundMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProvidentFundMSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EnterpriseDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +139,18 @@
     <EmbeddedResource Include="ModifyEnterprise.resx">
       <DependentUpon>ModifyEnterprise.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="database\ProvidentFundMS.ldb" />
+    <None Include="database\ProvidentFundMSDataSet.xsc">
+      <DependentUpon>ProvidentFundMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="database\ProvidentFundMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProvidentFundMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="database\ProvidentFundMSDataSet.xss">
+      <DependentUpon>ProvidentFundMSDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +164,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\ProvidentFundMS.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

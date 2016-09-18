@@ -88,7 +88,7 @@
             this.username_textbox.Location = new System.Drawing.Point(308, 333);
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(302, 35);
-            this.username_textbox.TabIndex = 4;
+            this.username_textbox.TabIndex = 0;
             // 
             // password_textbox
             // 
@@ -97,7 +97,7 @@
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '*';
             this.password_textbox.Size = new System.Drawing.Size(302, 35);
-            this.password_textbox.TabIndex = 4;
+            this.password_textbox.TabIndex = 1;
             // 
             // login_btn
             // 
@@ -106,7 +106,7 @@
             this.login_btn.Location = new System.Drawing.Point(308, 461);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(130, 39);
-            this.login_btn.TabIndex = 5;
+            this.login_btn.TabIndex = 2;
             this.login_btn.Text = "登录";
             this.login_btn.UseVisualStyleBackColor = true;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
@@ -118,9 +118,10 @@
             this.exit_btn.Location = new System.Drawing.Point(480, 461);
             this.exit_btn.Name = "exit_btn";
             this.exit_btn.Size = new System.Drawing.Size(130, 39);
-            this.exit_btn.TabIndex = 5;
+            this.exit_btn.TabIndex = 3;
             this.exit_btn.Text = "退出";
             this.exit_btn.UseVisualStyleBackColor = true;
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
             // LoginForm
             // 

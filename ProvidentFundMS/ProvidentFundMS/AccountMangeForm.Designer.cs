@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.reset_btn = new System.Windows.Forms.Button();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.confirm_textBox = new System.Windows.Forms.TextBox();
+            this.newPassword_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.newUsername_textBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.currPassword_textBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.currUsername_textBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,15 +55,16 @@
             this.label1.Text = "用户名密码修改";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // reset_btn
             // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(550, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 48);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "重置";
-            this.button1.UseVisualStyleBackColor = true;
+            this.reset_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.reset_btn.Location = new System.Drawing.Point(550, 380);
+            this.reset_btn.Name = "reset_btn";
+            this.reset_btn.Size = new System.Drawing.Size(174, 48);
+            this.reset_btn.TabIndex = 20;
+            this.reset_btn.Text = "重置";
+            this.reset_btn.UseVisualStyleBackColor = true;
+            this.reset_btn.Click += new System.EventHandler(this.reset_btn_Click);
             // 
             // addEnterprise_btn
             // 
@@ -74,22 +75,25 @@
             this.addEnterprise_btn.TabIndex = 21;
             this.addEnterprise_btn.Text = "确认修改";
             this.addEnterprise_btn.UseVisualStyleBackColor = true;
+            this.addEnterprise_btn.Click += new System.EventHandler(this.addEnterprise_btn_Click);
             // 
-            // textBox5
+            // confirm_textBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox5.Location = new System.Drawing.Point(337, 314);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(387, 29);
-            this.textBox5.TabIndex = 14;
+            this.confirm_textBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.confirm_textBox.Location = new System.Drawing.Point(337, 314);
+            this.confirm_textBox.Name = "confirm_textBox";
+            this.confirm_textBox.PasswordChar = '*';
+            this.confirm_textBox.Size = new System.Drawing.Size(387, 29);
+            this.confirm_textBox.TabIndex = 14;
             // 
-            // textBox4
+            // newPassword_textBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox4.Location = new System.Drawing.Point(337, 257);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(387, 29);
-            this.textBox4.TabIndex = 15;
+            this.newPassword_textBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.newPassword_textBox.Location = new System.Drawing.Point(337, 257);
+            this.newPassword_textBox.Name = "newPassword_textBox";
+            this.newPassword_textBox.PasswordChar = '*';
+            this.newPassword_textBox.Size = new System.Drawing.Size(387, 29);
+            this.newPassword_textBox.TabIndex = 15;
             // 
             // label6
             // 
@@ -102,13 +106,13 @@
             this.label6.Text = "确认新密码：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // newUsername_textBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(337, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(387, 29);
-            this.textBox3.TabIndex = 16;
+            this.newUsername_textBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.newUsername_textBox.Location = new System.Drawing.Point(337, 198);
+            this.newUsername_textBox.Name = "newUsername_textBox";
+            this.newUsername_textBox.Size = new System.Drawing.Size(387, 29);
+            this.newUsername_textBox.TabIndex = 16;
             // 
             // label5
             // 
@@ -121,13 +125,14 @@
             this.label5.Text = "新密码：";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // currPassword_textBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(337, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 29);
-            this.textBox2.TabIndex = 17;
+            this.currPassword_textBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.currPassword_textBox.Location = new System.Drawing.Point(337, 144);
+            this.currPassword_textBox.Name = "currPassword_textBox";
+            this.currPassword_textBox.PasswordChar = '*';
+            this.currPassword_textBox.Size = new System.Drawing.Size(387, 29);
+            this.currPassword_textBox.TabIndex = 17;
             // 
             // label4
             // 
@@ -140,13 +145,13 @@
             this.label4.Text = "新用户名：";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // currUsername_textBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(337, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 29);
-            this.textBox1.TabIndex = 18;
+            this.currUsername_textBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.currUsername_textBox.Location = new System.Drawing.Point(337, 90);
+            this.currUsername_textBox.Name = "currUsername_textBox";
+            this.currUsername_textBox.Size = new System.Drawing.Size(387, 29);
+            this.currUsername_textBox.TabIndex = 18;
             // 
             // label3
             // 
@@ -184,16 +189,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.reset_btn);
             this.Controls.Add(this.addEnterprise_btn);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.confirm_textBox);
+            this.Controls.Add(this.newPassword_textBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.newUsername_textBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.currPassword_textBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.currUsername_textBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
@@ -209,16 +214,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button reset_btn;
         private System.Windows.Forms.Button addEnterprise_btn;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox confirm_textBox;
+        private System.Windows.Forms.TextBox newPassword_textBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox newUsername_textBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox currPassword_textBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox currUsername_textBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;

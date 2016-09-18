@@ -1,6 +1,6 @@
 ﻿namespace ProvidentFundMS
 {
-    partial class ModifyEnterpriseForm
+    partial class AddEnterpriseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,20 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.enterpriseName_textbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.licence_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.corporation_textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.enterprise_addr_textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.provident_found_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.telnumber_textbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.reset_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -68,13 +68,13 @@
             this.label2.Text = "企业名称：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // enterpriseName_textbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(319, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 29);
-            this.textBox1.TabIndex = 4;
+            this.enterpriseName_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.enterpriseName_textbox.Location = new System.Drawing.Point(319, 93);
+            this.enterpriseName_textbox.Name = "enterpriseName_textbox";
+            this.enterpriseName_textbox.Size = new System.Drawing.Size(387, 29);
+            this.enterpriseName_textbox.TabIndex = 4;
             // 
             // label3
             // 
@@ -87,13 +87,13 @@
             this.label3.Text = "营业执照编号：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // licence_textbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(319, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 29);
-            this.textBox2.TabIndex = 4;
+            this.licence_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.licence_textbox.Location = new System.Drawing.Point(319, 147);
+            this.licence_textbox.Name = "licence_textbox";
+            this.licence_textbox.Size = new System.Drawing.Size(387, 29);
+            this.licence_textbox.TabIndex = 4;
             // 
             // label4
             // 
@@ -106,13 +106,13 @@
             this.label4.Text = "企业法人：";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // corporation_textbox
             // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(319, 201);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(387, 29);
-            this.textBox3.TabIndex = 4;
+            this.corporation_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.corporation_textbox.Location = new System.Drawing.Point(319, 201);
+            this.corporation_textbox.Name = "corporation_textbox";
+            this.corporation_textbox.Size = new System.Drawing.Size(387, 29);
+            this.corporation_textbox.TabIndex = 4;
             // 
             // label5
             // 
@@ -125,13 +125,13 @@
             this.label5.Text = "企业地址：";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // enterprise_addr_textbox
             // 
-            this.textBox4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox4.Location = new System.Drawing.Point(319, 260);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(387, 29);
-            this.textBox4.TabIndex = 4;
+            this.enterprise_addr_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.enterprise_addr_textbox.Location = new System.Drawing.Point(319, 260);
+            this.enterprise_addr_textbox.Name = "enterprise_addr_textbox";
+            this.enterprise_addr_textbox.Size = new System.Drawing.Size(387, 29);
+            this.enterprise_addr_textbox.TabIndex = 4;
             // 
             // label6
             // 
@@ -144,13 +144,13 @@
             this.label6.Text = "党建公积金账号：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // provident_found_textbox
             // 
-            this.textBox5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox5.Location = new System.Drawing.Point(319, 317);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(387, 29);
-            this.textBox5.TabIndex = 4;
+            this.provident_found_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.provident_found_textbox.Location = new System.Drawing.Point(319, 317);
+            this.provident_found_textbox.Name = "provident_found_textbox";
+            this.provident_found_textbox.Size = new System.Drawing.Size(387, 29);
+            this.provident_found_textbox.TabIndex = 4;
             // 
             // label7
             // 
@@ -163,13 +163,13 @@
             this.label7.Text = "联系电话：";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // telnumber_textbox
             // 
-            this.textBox6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox6.Location = new System.Drawing.Point(319, 380);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(387, 29);
-            this.textBox6.TabIndex = 4;
+            this.telnumber_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.telnumber_textbox.Location = new System.Drawing.Point(319, 380);
+            this.telnumber_textbox.Name = "telnumber_textbox";
+            this.telnumber_textbox.Size = new System.Drawing.Size(387, 29);
+            this.telnumber_textbox.TabIndex = 4;
             // 
             // label8
             // 
@@ -188,16 +188,18 @@
             this.addEnterprise_btn.TabIndex = 6;
             this.addEnterprise_btn.Text = "确认增加";
             this.addEnterprise_btn.UseVisualStyleBackColor = true;
+            this.addEnterprise_btn.Click += new System.EventHandler(this.addEnterprise_btn_Click);
             // 
-            // button1
+            // reset_btn
             // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(532, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "重置";
-            this.button1.UseVisualStyleBackColor = true;
+            this.reset_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.reset_btn.Location = new System.Drawing.Point(532, 441);
+            this.reset_btn.Name = "reset_btn";
+            this.reset_btn.Size = new System.Drawing.Size(174, 48);
+            this.reset_btn.TabIndex = 6;
+            this.reset_btn.Text = "重置";
+            this.reset_btn.UseVisualStyleBackColor = true;
+            this.reset_btn.Click += new System.EventHandler(this.reset_btn_Click);
             // 
             // AddEnterpriseForm
             // 
@@ -205,18 +207,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.reset_btn);
             this.Controls.Add(this.addEnterprise_btn);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.telnumber_textbox);
+            this.Controls.Add(this.provident_found_textbox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.enterprise_addr_textbox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.corporation_textbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.licence_textbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.enterpriseName_textbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -233,19 +235,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox enterpriseName_textbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox licence_textbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox corporation_textbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox enterprise_addr_textbox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox provident_found_textbox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox telnumber_textbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button addEnterprise_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button reset_btn;
     }
 }
