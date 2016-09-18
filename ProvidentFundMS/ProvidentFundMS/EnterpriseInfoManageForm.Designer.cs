@@ -38,7 +38,7 @@
             this.contact_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modify_enterpriseinfo_menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delete_enterprise_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
@@ -97,7 +97,7 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.modify_enterpriseinfo_menu,
-            this.删除ToolStripMenuItem});
+            this.delete_enterprise_menu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
             // 
@@ -108,11 +108,12 @@
             this.modify_enterpriseinfo_menu.Text = "修改";
             this.modify_enterpriseinfo_menu.Click += new System.EventHandler(this.modify_enterpriseinfo_menu_Click);
             // 
-            // 删除ToolStripMenuItem
+            // delete_enterprise_menu
             // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.删除ToolStripMenuItem.Text = "删除";
+            this.delete_enterprise_menu.Name = "delete_enterprise_menu";
+            this.delete_enterprise_menu.Size = new System.Drawing.Size(152, 22);
+            this.delete_enterprise_menu.Text = "删除";
+            this.delete_enterprise_menu.Click += new System.EventHandler(this.delete_enterprise_menu_Click);
             // 
             // label1
             // 
@@ -128,7 +129,7 @@
             // addEnterprise_btn
             // 
             this.addEnterprise_btn.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addEnterprise_btn.Location = new System.Drawing.Point(622, 55);
+            this.addEnterprise_btn.Location = new System.Drawing.Point(647, 55);
             this.addEnterprise_btn.Name = "addEnterprise_btn";
             this.addEnterprise_btn.Size = new System.Drawing.Size(241, 42);
             this.addEnterprise_btn.TabIndex = 11;
@@ -167,6 +168,6 @@
         private System.Windows.Forms.Button addEnterprise_btn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem modify_enterpriseinfo_menu;
-        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem delete_enterprise_menu;
     }
 }

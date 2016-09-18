@@ -30,20 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.enterprise_textbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.licence_textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.corporate_textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.enterprise_addr_textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.fundaccount_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.contact_textbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.addEnterprise_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.confirm_modify_btn = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -68,14 +68,14 @@
             this.label2.Text = "企业名称：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // enterprise_textbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(319, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 29);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "青海君东信息科技有限责任公司";
+            this.enterprise_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.enterprise_textbox.Location = new System.Drawing.Point(319, 93);
+            this.enterprise_textbox.Name = "enterprise_textbox";
+            this.enterprise_textbox.Size = new System.Drawing.Size(387, 29);
+            this.enterprise_textbox.TabIndex = 4;
+            this.enterprise_textbox.Text = "青海君东信息科技有限责任公司";
             // 
             // label3
             // 
@@ -88,14 +88,14 @@
             this.label3.Text = "营业执照编号：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // licence_textbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(319, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 29);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "20168888888";
+            this.licence_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.licence_textbox.Location = new System.Drawing.Point(319, 147);
+            this.licence_textbox.Name = "licence_textbox";
+            this.licence_textbox.Size = new System.Drawing.Size(387, 29);
+            this.licence_textbox.TabIndex = 4;
+            this.licence_textbox.Text = "20168888888";
             // 
             // label4
             // 
@@ -108,14 +108,14 @@
             this.label4.Text = "企业法人：";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // corporate_textbox
             // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(319, 201);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(387, 29);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "杜正君";
+            this.corporate_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.corporate_textbox.Location = new System.Drawing.Point(319, 201);
+            this.corporate_textbox.Name = "corporate_textbox";
+            this.corporate_textbox.Size = new System.Drawing.Size(387, 29);
+            this.corporate_textbox.TabIndex = 4;
+            this.corporate_textbox.Text = "杜正君";
             // 
             // label5
             // 
@@ -128,14 +128,14 @@
             this.label5.Text = "企业地址：";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // enterprise_addr_textbox
             // 
-            this.textBox4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox4.Location = new System.Drawing.Point(319, 260);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(387, 29);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "青海省西宁市城北区生物园区";
+            this.enterprise_addr_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.enterprise_addr_textbox.Location = new System.Drawing.Point(319, 260);
+            this.enterprise_addr_textbox.Name = "enterprise_addr_textbox";
+            this.enterprise_addr_textbox.Size = new System.Drawing.Size(387, 29);
+            this.enterprise_addr_textbox.TabIndex = 4;
+            this.enterprise_addr_textbox.Text = "青海省西宁市城北区生物园区";
             // 
             // label6
             // 
@@ -148,14 +148,14 @@
             this.label6.Text = "党建公积金账号：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox5
+            // fundaccount_textbox
             // 
-            this.textBox5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox5.Location = new System.Drawing.Point(319, 317);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(387, 29);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "20166666666XYZW";
+            this.fundaccount_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.fundaccount_textbox.Location = new System.Drawing.Point(319, 317);
+            this.fundaccount_textbox.Name = "fundaccount_textbox";
+            this.fundaccount_textbox.Size = new System.Drawing.Size(387, 29);
+            this.fundaccount_textbox.TabIndex = 4;
+            this.fundaccount_textbox.Text = "20166666666XYZW";
             // 
             // label7
             // 
@@ -168,14 +168,14 @@
             this.label7.Text = "联系电话：";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // contact_textbox
             // 
-            this.textBox6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox6.Location = new System.Drawing.Point(319, 380);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(387, 29);
-            this.textBox6.TabIndex = 4;
-            this.textBox6.Text = "13897408428";
+            this.contact_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.contact_textbox.Location = new System.Drawing.Point(319, 380);
+            this.contact_textbox.Name = "contact_textbox";
+            this.contact_textbox.Size = new System.Drawing.Size(387, 29);
+            this.contact_textbox.TabIndex = 4;
+            this.contact_textbox.Text = "13897408428";
             // 
             // label8
             // 
@@ -185,25 +185,26 @@
             this.label8.Size = new System.Drawing.Size(773, 454);
             this.label8.TabIndex = 5;
             // 
-            // addEnterprise_btn
+            // confirm_modify_btn
             // 
-            this.addEnterprise_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addEnterprise_btn.Location = new System.Drawing.Point(319, 441);
-            this.addEnterprise_btn.Name = "addEnterprise_btn";
-            this.addEnterprise_btn.Size = new System.Drawing.Size(188, 48);
-            this.addEnterprise_btn.TabIndex = 6;
-            this.addEnterprise_btn.Text = "确认修改";
-            this.addEnterprise_btn.UseVisualStyleBackColor = true;
+            this.confirm_modify_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.confirm_modify_btn.Location = new System.Drawing.Point(319, 441);
+            this.confirm_modify_btn.Name = "confirm_modify_btn";
+            this.confirm_modify_btn.Size = new System.Drawing.Size(188, 48);
+            this.confirm_modify_btn.TabIndex = 6;
+            this.confirm_modify_btn.Text = "确认修改";
+            this.confirm_modify_btn.UseVisualStyleBackColor = true;
+            this.confirm_modify_btn.Click += new System.EventHandler(this.confirm_modify_btn_Click);
             // 
-            // button1
+            // exit_button
             // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(532, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "重置";
-            this.button1.UseVisualStyleBackColor = true;
+            this.exit_button.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.exit_button.Location = new System.Drawing.Point(532, 441);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(174, 48);
+            this.exit_button.TabIndex = 6;
+            this.exit_button.Text = "退出";
+            this.exit_button.UseVisualStyleBackColor = true;
             // 
             // ModifyEnterpriseForm
             // 
@@ -211,18 +212,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.addEnterprise_btn);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.confirm_modify_btn);
+            this.Controls.Add(this.contact_textbox);
+            this.Controls.Add(this.fundaccount_textbox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.enterprise_addr_textbox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.corporate_textbox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.licence_textbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.enterprise_textbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -230,6 +231,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ModifyEnterpriseForm";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
+            this.Load += new System.EventHandler(this.ModifyEnterpriseForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,19 +241,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox enterprise_textbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox licence_textbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox corporate_textbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox enterprise_addr_textbox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox fundaccount_textbox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox contact_textbox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button addEnterprise_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button confirm_modify_btn;
+        private System.Windows.Forms.Button exit_button;
     }
 }

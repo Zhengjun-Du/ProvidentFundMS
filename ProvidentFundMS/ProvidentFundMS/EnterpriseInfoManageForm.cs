@@ -48,6 +48,7 @@ namespace ProvidentFundMS
 
                 this.EnterPriseInfoListView.Items.Add(lvi);
             }
+            this.EnterPriseInfoListView.Refresh();
             myReader.Close();
         }
 
@@ -62,12 +63,34 @@ namespace ProvidentFundMS
             addEnterpriseForm.ShowDialog();
             this.EnterPriseInfoListView.Items.Clear();
             InsertDataOfListView();
+            this.EnterPriseInfoListView.Invalidate();
         }
 
         private void modify_enterpriseinfo_menu_Click(object sender, EventArgs e)
         {
-            ModifyEnterpriseForm modifyEnterpriseForm = new ModifyEnterpriseForm();
-            modifyEnterpriseForm.ShowDialog();
+            if (this.EnterPriseInfoListView.SelectedIndices.Count > 0)
+            {
+                ModifyEnterpriseForm modifyEnterpriseForm = new ModifyEnterpriseForm();
+                modifyEnterpriseForm.display_content = this.EnterPriseInfoListView.SelectedItems[0];
+                modifyEnterpriseForm.ShowDialog();
+            }
+        }
+
+        private void delete_enterprise_menu_Click(object sender, EventArgs e)
+        {
+            if (this.EnterPriseInfoListView.SelectedIndices.Count > 0)
+            {
+                int index = this.EnterPriseInfoListView.SelectedIndices[0];
+                string enterprise_name = this.EnterPriseInfoListView.SelectedItems[0].Text;
+
+                DialogResult dr = MessageBox.Show("确认删除吗？", "提示", MessageBoxButtons.OKCancel);
+                if (dr == DialogResult.OK)
+                {
+                    String delete_sql = "DELETE FROM enterprise WHERE [enterprise_name] = '" + enterprise_name + "'";
+                    OleDbCommand myComm = new OleDbCommand(delete_sql, myConn);
+                    myComm.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

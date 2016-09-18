@@ -14,7 +14,6 @@ E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\bin\Debug\
 E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\bin\Debug\EntityFramework.SqlServer.xml
 E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.AddEnterpriseForm.resources
 E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.enterpriseIEMForm.resources
-E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.EnterpriseInfoForm.resources
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\ProvidentFundMS.exe.config
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\ProvidentFundMS.exe
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\ProvidentFundMS.pdb
@@ -55,3 +54,8 @@ F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentF
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\EntityFramework.SqlServer.xml
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\database\ProvidentFundMS.mdb
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.csprojResolveAssemblyReference.cache
+E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\bin\Debug\database\ProvidentFundMS.mdb
+E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.AccountMangeForm.resources
+E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.EnterpriseDetailForm.resources
+E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.EnterpriseInfoManageForm.resources
+E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.ModifyEnterpriseForm.resources
