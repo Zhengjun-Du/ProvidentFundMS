@@ -34,14 +34,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.modifyAccount_btn = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // addEnterprise_btn
             // 
             this.addEnterprise_btn.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addEnterprise_btn.Location = new System.Drawing.Point(389, 163);
+            this.addEnterprise_btn.Location = new System.Drawing.Point(389, 166);
             this.addEnterprise_btn.Name = "addEnterprise_btn";
             this.addEnterprise_btn.Size = new System.Drawing.Size(239, 70);
             this.addEnterprise_btn.TabIndex = 0;
@@ -52,7 +56,7 @@
             // enterpriseIEM_btn
             // 
             this.enterpriseIEM_btn.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.enterpriseIEM_btn.Location = new System.Drawing.Point(389, 285);
+            this.enterpriseIEM_btn.Location = new System.Drawing.Point(389, 278);
             this.enterpriseIEM_btn.Name = "enterpriseIEM_btn";
             this.enterpriseIEM_btn.Size = new System.Drawing.Size(239, 70);
             this.enterpriseIEM_btn.TabIndex = 0;
@@ -63,7 +67,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(250, 163);
+            this.pictureBox1.Location = new System.Drawing.Point(250, 166);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(92, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -73,7 +77,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(249, 285);
+            this.pictureBox2.Location = new System.Drawing.Point(249, 278);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(93, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,6 +95,35 @@
             this.label1.Text = "环新宁广场商圈党建公积金管理系统操作面板";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // modifyAccount_btn
+            // 
+            this.modifyAccount_btn.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.modifyAccount_btn.Location = new System.Drawing.Point(389, 384);
+            this.modifyAccount_btn.Name = "modifyAccount_btn";
+            this.modifyAccount_btn.Size = new System.Drawing.Size(239, 70);
+            this.modifyAccount_btn.TabIndex = 0;
+            this.modifyAccount_btn.Text = "修改用户名密码";
+            this.modifyAccount_btn.UseVisualStyleBackColor = true;
+            this.modifyAccount_btn.Click += new System.EventHandler(this.modifyAccount_btn_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(249, 384);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(93, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(150, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(635, 359);
+            this.label2.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -98,14 +131,19 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.modifyAccount_btn);
             this.Controls.Add(this.enterpriseIEM_btn);
             this.Controls.Add(this.addEnterprise_btn);
+            this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -117,5 +155,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button modifyAccount_btn;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -36,11 +36,11 @@
             this.licence_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.address_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contact_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modify_enterpriseinfo_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,27 @@
             this.contact_title.Text = "联系方式";
             this.contact_title.Width = 94;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modify_enterpriseinfo_menu,
+            this.删除ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            // 
+            // modify_enterpriseinfo_menu
+            // 
+            this.modify_enterpriseinfo_menu.Name = "modify_enterpriseinfo_menu";
+            this.modify_enterpriseinfo_menu.Size = new System.Drawing.Size(152, 22);
+            this.modify_enterpriseinfo_menu.Text = "修改";
+            this.modify_enterpriseinfo_menu.Click += new System.EventHandler(this.modify_enterpriseinfo_menu_Click);
+            // 
+            // 删除ToolStripMenuItem
+            // 
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除ToolStripMenuItem.Text = "删除";
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -115,26 +136,6 @@
             this.addEnterprise_btn.UseVisualStyleBackColor = true;
             this.addEnterprise_btn.Click += new System.EventHandler(this.addEnterprise_btn_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.修改ToolStripMenuItem,
-            this.删除ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
-            // 
-            // 修改ToolStripMenuItem
-            // 
-            this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.修改ToolStripMenuItem.Text = "修改";
-            // 
-            // 删除ToolStripMenuItem
-            // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.删除ToolStripMenuItem.Text = "删除";
-            // 
             // EnterpriseInfoManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -144,6 +145,7 @@
             this.Controls.Add(this.addEnterprise_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EnterPriseInfoListView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EnterpriseInfoManageForm";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseInfoManageForm_Load);
@@ -164,7 +166,7 @@
         private System.Windows.Forms.ColumnHeader contact_title;
         private System.Windows.Forms.Button addEnterprise_btn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 修改ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modify_enterpriseinfo_menu;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
     }
 }

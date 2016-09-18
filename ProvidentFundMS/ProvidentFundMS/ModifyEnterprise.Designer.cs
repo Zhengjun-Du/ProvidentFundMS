@@ -52,9 +52,9 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(32, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 52);
+            this.label1.Size = new System.Drawing.Size(195, 52);
             this.label1.TabIndex = 3;
-            this.label1.Text = "新增企业信息录入";
+            this.label1.Text = "修改企业信息";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -75,6 +75,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(387, 29);
             this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "青海君东信息科技有限责任公司";
             // 
             // label3
             // 
@@ -94,6 +95,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(387, 29);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "20168888888";
             // 
             // label4
             // 
@@ -113,6 +115,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(387, 29);
             this.textBox3.TabIndex = 4;
+            this.textBox3.Text = "杜正君";
             // 
             // label5
             // 
@@ -132,6 +135,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(387, 29);
             this.textBox4.TabIndex = 4;
+            this.textBox4.Text = "青海省西宁市城北区生物园区";
             // 
             // label6
             // 
@@ -151,6 +155,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(387, 29);
             this.textBox5.TabIndex = 4;
+            this.textBox5.Text = "20166666666XYZW";
             // 
             // label7
             // 
@@ -170,6 +175,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(387, 29);
             this.textBox6.TabIndex = 4;
+            this.textBox6.Text = "13897408428";
             // 
             // label8
             // 
@@ -186,7 +192,7 @@
             this.addEnterprise_btn.Name = "addEnterprise_btn";
             this.addEnterprise_btn.Size = new System.Drawing.Size(188, 48);
             this.addEnterprise_btn.TabIndex = 6;
-            this.addEnterprise_btn.Text = "确认增加";
+            this.addEnterprise_btn.Text = "确认修改";
             this.addEnterprise_btn.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -199,7 +205,7 @@
             this.button1.Text = "重置";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // AddEnterpriseForm
+            // ModifyEnterpriseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,7 +228,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "AddEnterpriseForm";
+            this.Name = "ModifyEnterpriseForm";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.ResumeLayout(false);
             this.PerformLayout();

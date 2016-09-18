@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProvidentFundMS
 {
-    public partial class ModifyEnterpriseForm : Form
+    public partial class AccountMangeForm : Form
     {
-        public ModifyEnterpriseForm()
+        public AccountMangeForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

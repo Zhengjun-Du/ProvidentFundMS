@@ -41,8 +41,13 @@ namespace ProvidentFundMS
 
         private void addEnterprise_btn_Click(object sender, EventArgs e)
         {
-            AddEnterpriseForm addEnterpriseForm = new AddEnterpriseForm();
+            ModifyEnterpriseForm addEnterpriseForm = new ModifyEnterpriseForm();
             addEnterpriseForm.ShowDialog();
+        }
+
+        private void modify_enterpriseinfo_menu_Click(object sender, EventArgs e)
+        {
+            modify
         }
     }
 }

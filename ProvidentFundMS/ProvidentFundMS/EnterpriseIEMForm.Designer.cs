@@ -99,6 +99,7 @@
             this.ClientSize = new System.Drawing.Size(896, 647);
             this.Controls.Add(this.EnterPriseIEListView);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EnterpriseIEMForm";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseIEMForm_Load);

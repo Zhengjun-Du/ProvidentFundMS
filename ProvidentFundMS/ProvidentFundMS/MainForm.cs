@@ -30,5 +30,11 @@ namespace ProvidentFundMS
             EnterpriseIEMForm enterpriseIEMForm = new EnterpriseIEMForm();
             enterpriseIEMForm.ShowDialog();
         }
+
+        private void modifyAccount_btn_Click(object sender, EventArgs e)
+        {
+            AccountMangeForm accountMangaForm = new AccountMangeForm();
+            accountMangaForm.ShowDialog();
+        }
     }
 }
