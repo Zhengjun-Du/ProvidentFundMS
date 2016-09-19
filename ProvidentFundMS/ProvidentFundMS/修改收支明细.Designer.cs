@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(修改收支明细));
             this.label6 = new System.Windows.Forms.Label();
             this.provident_found_number_label = new System.Windows.Forms.Label();
             this.enterprise_label = new System.Windows.Forms.Label();
@@ -295,6 +296,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "修改收支明细";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.ModifyIEinfoFrom_Load);

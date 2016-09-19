@@ -13,9 +13,6 @@ namespace ProvidentFundMS
 {
     public partial class 企业收支总览 : Form
     {
-        private String sqlConn = null;
-        private OleDbConnection myConn = null;
-
         public 企业收支总览()
         {
             InitializeComponent();
@@ -23,19 +20,14 @@ namespace ProvidentFundMS
             this.MaximizeBox = false;
             this.EnterPriseIEListView.GridLines = true;
             this.EnterPriseIEListView.FullRowSelect = true;
-
-            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
-            myConn = new OleDbConnection(sqlConn);
         }
 
         private void  UpdateDataOfListView()
         {
             this.EnterPriseIEListView.Items.Clear();
 
-            myConn.Open();
             String selcet_sql = "select * from enterprise";
-            OleDbCommand myComm = new OleDbCommand(selcet_sql, myConn);
-            OleDbDataReader myReader = myComm.ExecuteReader();
+            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql);
 
             while (myReader.Read())
             {
@@ -49,9 +41,7 @@ namespace ProvidentFundMS
 
                 this.EnterPriseIEListView.Items.Add(lvi);
             }
-            
             myReader.Close();
-            myConn.Close();
         }
 
         private void EnterpriseIEMForm_Load(object sender, EventArgs e)

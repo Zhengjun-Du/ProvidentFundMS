@@ -18,14 +18,9 @@ namespace ProvidentFundMS
         public ListViewItem lv = null;
         string original_modifytime;
 
-        String sqlConn = null;
-        OleDbConnection myConn = null;
-
         public 修改收支明细()
         {
             InitializeComponent();
-            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
-            myConn = new OleDbConnection(sqlConn);
 
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
@@ -54,7 +49,6 @@ namespace ProvidentFundMS
                 return;
             }
 
-            myConn.Open();
             String update_sql = "UPDATE incomecost SET";
             update_sql += " [abstract] = '" + this.abstract_comboBox.Text+ "',";
             update_sql += " [income] = " + this.income_textbox.Text + ",";
@@ -63,11 +57,7 @@ namespace ProvidentFundMS
             update_sql += " [operator] = '" + this.operator_textbox.Text + "'";
             update_sql += " WHERE [date] = #" + original_modifytime + "#";
 
-
-            OleDbCommand myComm = new OleDbCommand(update_sql, myConn);
-            myComm.ExecuteNonQuery();
-
-            myConn.Close();
+            new DataAccess().UpdateData(update_sql);
 
             MessageBox.Show("数据修改成功。");
         }

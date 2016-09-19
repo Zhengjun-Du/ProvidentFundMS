@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(修改用户名密码));
             this.label1 = new System.Windows.Forms.Label();
             this.reset_btn = new System.Windows.Forms.Button();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
@@ -183,7 +184,7 @@
             this.label8.Size = new System.Drawing.Size(773, 397);
             this.label8.TabIndex = 19;
             // 
-            // AccountMangeForm
+            // 修改用户名密码
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +205,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "AccountMangeForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "修改用户名密码";
             this.Text = "AccountMangaForm";
             this.ResumeLayout(false);
             this.PerformLayout();

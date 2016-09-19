@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(添加收支记录));
             this.abstract_comboBox = new System.Windows.Forms.ComboBox();
             this.exit_btn = new System.Windows.Forms.Button();
             this.confirm_add_btn = new System.Windows.Forms.Button();
@@ -328,6 +329,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "添加收支记录";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.AddIERecordForm_Load);

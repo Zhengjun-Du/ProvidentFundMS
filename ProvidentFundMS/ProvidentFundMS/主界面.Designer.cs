@@ -124,7 +124,7 @@
             this.label2.Size = new System.Drawing.Size(635, 359);
             this.label2.TabIndex = 3;
             // 
-            // MainForm
+            // 主界面
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,8 @@
             this.Controls.Add(this.addEnterprise_btn);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "MainForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "主界面";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

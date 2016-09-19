@@ -120,4 +120,29 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///////////////////////////7+/v/e3Pv/wLv4/765+P/c2vv//v7+////////////////////
+        ////////////////////////+/v+/5mS9P8xIur/EQDn/xEA5/8RAOf/FQTn/1dL7v+5tPj//v7+////
+        ////////////////////////8fD9/1JG7f9FOOz/Sj7s/yER6P9DNez/ubT3/3ty8f89MOv/XVLu/8K+
+        +P///////////////////////f3+/4qC8/91a/H/XFDu/0Ay6/9dUu7/Wk/u/1VI7f9QQ+3/f3by/4h/
+        8/9wZvD/5OL8//////////////////Hw/f+spvb/nZf1/4J58v9sYfD/hHvy/0Ez6/87Lev/zsr6////
+        ///Y1vv/gHfy/5CI8//39/7////////////y8v3/raf2/+Ph/P//////+Pf+/4qC8/+yrff/cGbw/xYF
+        5/9yZ/D/Gwvo/xEA5/8RAOf/ZVrv////////////T0Lt/4R78v/+/v7/////////////////qKH2//Py
+        /f8+MOv/EQDn/xEA5/8RAOf/EQDn/xgH5//+/v7/+vn+/xIB5/9QRO3/+vr+//////////////////7+
+        /v/19P7/2db7/yIT6P8RAOf/EQDn/xEA5/85K+v//v7+//7+/v89L+v/EQDn/6qk9v+L8f//fu///0Tp
+        //9y7v//pvT////////c2fv/Vkru/xsL6P9BM+v/d5DW//v7/v//////5OL8/5WO9P/x8P3/ofT//6Dz
+        //+v9f//AuH//5Ty/////////////9/06f+F1qz/Vpaz/y4v3f/+/v////////r6/v////////////H9
+        //+Q8v//Ouf//5jz//9n7f////////////+Z3bn/KbNx/xIM3v9sYfD////////////R0Pj/6e/2////
+        ///u/f//Meb//3rv//+Y8v//nfP////////q+PH/O755/x9soP8SAef/0c76/////////////v7+/3mJ
+        3P/K6N///v7+//r+///U+v//hfD///z+///b8+b/TcSG/yaef/8SC9//enDx////////////////////
+        ///x8P3/UmXU/1KjpP+P2rP/peHB/5jduf9nzZj/LLlw/ySNiv8TFNn/ZFnv//v7/v//////////////
+        //////////////v7/v+UjfP/LUTM/x1dqv8gcJ3/HmOm/xcxxv8sHun/oZv1//7+/v//////////////
+        //////////////////////////////r6/v/Hw/n/pJ71/6eg9v/Myfn//Pz+////////////////////
+        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

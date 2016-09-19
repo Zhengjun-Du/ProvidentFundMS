@@ -17,17 +17,11 @@ namespace ProvidentFundMS
         public string provident_number = null;
         public ListViewItem lv = null;
 
-        String sqlConn = null;
-        OleDbConnection myConn = null;
-
         public 添加收支记录()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
-
-            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
-            myConn = new OleDbConnection(sqlConn);
         }
 
         private void confirm_add_btn_Click(object sender, EventArgs e)
@@ -50,7 +44,6 @@ namespace ProvidentFundMS
                 return;
             }
 
-            myConn.Open();
             int enterprise_id = int.Parse(lv.SubItems[5].Text);
             String insert_sql = "INSERT INTO incomecost ([date],[abstract],[income],[cost],[remain],[operator],[enterprise_id]) VALUES";
             insert_sql += "('" + this.date_textbox.Text + "',"
@@ -61,19 +54,16 @@ namespace ProvidentFundMS
                           + "'" + this.operator_textbox.Text + "',"
                                 + enterprise_id + ")";
 
-            OleDbCommand myComm = new OleDbCommand(insert_sql, myConn);
-            myComm.ExecuteNonQuery();
+            new DataAccess().InsertData(insert_sql);
 
             this.remain_label.Text = this.remain_textbox.Text;
 
 
             String update_sql = "UPDATE enterprise SET";
-            update_sql += " [remain] = " + this.remain_textbox.Text;
-            update_sql += " WHERE [id] =" + enterprise_id;
-            myComm = new OleDbCommand(update_sql, myConn);
-            myComm.ExecuteNonQuery();
+                   update_sql += " [remain] = " + this.remain_textbox.Text;
+                   update_sql += " WHERE [id] =" + enterprise_id;
 
-            myConn.Close();
+            new DataAccess().UpdateData(update_sql);
 
             MessageBox.Show("添加记录成功。");
             this.Close();
@@ -85,14 +75,10 @@ namespace ProvidentFundMS
             this.provident_found_number_label.Text = provident_number;
             this.date_textbox.Text = DateTime.Now.ToString();
 
-            myConn.Open();
             String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;
-            OleDbCommand myComm = new OleDbCommand(selcet_sql_0, myConn);
-            OleDbDataReader myReader = myComm.ExecuteReader();
+            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql_0);
             if (myReader.Read())
                 this.remain_label.Text = myReader["remain"].ToString();
-            myConn.Close();
-
         }
 
         private void income_textbox_TextChanged(object sender, EventArgs e)

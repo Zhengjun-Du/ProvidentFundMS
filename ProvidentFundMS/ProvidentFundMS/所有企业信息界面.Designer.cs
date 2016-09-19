@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(所有企业信息界面));
             this.EnterPriseInfoListView = new System.Windows.Forms.ListView();
             this.name_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.fundaccount_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -99,19 +100,19 @@
             this.modify_enterpriseinfo_menu,
             this.delete_enterprise_menu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
             // 
             // modify_enterpriseinfo_menu
             // 
             this.modify_enterpriseinfo_menu.Name = "modify_enterpriseinfo_menu";
-            this.modify_enterpriseinfo_menu.Size = new System.Drawing.Size(152, 22);
+            this.modify_enterpriseinfo_menu.Size = new System.Drawing.Size(100, 22);
             this.modify_enterpriseinfo_menu.Text = "修改";
             this.modify_enterpriseinfo_menu.Click += new System.EventHandler(this.modify_enterpriseinfo_menu_Click);
             // 
             // delete_enterprise_menu
             // 
             this.delete_enterprise_menu.Name = "delete_enterprise_menu";
-            this.delete_enterprise_menu.Size = new System.Drawing.Size(152, 22);
+            this.delete_enterprise_menu.Size = new System.Drawing.Size(100, 22);
             this.delete_enterprise_menu.Text = "删除";
             this.delete_enterprise_menu.Click += new System.EventHandler(this.delete_enterprise_menu_Click);
             // 
@@ -137,7 +138,7 @@
             this.addEnterprise_btn.UseVisualStyleBackColor = true;
             this.addEnterprise_btn.Click += new System.EventHandler(this.addEnterprise_btn_Click);
             // 
-            // EnterpriseInfoManageForm
+            // 所有企业信息界面
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,7 +148,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EnterPriseInfoListView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "EnterpriseInfoManageForm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "所有企业信息界面";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseInfoManageForm_Load);
             this.contextMenuStrip1.ResumeLayout(false);

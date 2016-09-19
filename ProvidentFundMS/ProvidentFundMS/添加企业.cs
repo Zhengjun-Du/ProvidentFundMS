@@ -13,18 +13,11 @@ namespace ProvidentFundMS
 {
     public partial class AddEnterpriseForm : Form
     {
-        private String sqlConn = null;
-        OleDbConnection myConn;
-
         public AddEnterpriseForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
-
-            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
-            myConn = new OleDbConnection(sqlConn);
-            myConn.Open();
         }
 
         private void addEnterprise_btn_Click(object sender, EventArgs e)
@@ -48,8 +41,7 @@ namespace ProvidentFundMS
                           + "'" + this.provident_found_textbox.Text + "',"
                           + "'" + this.telnumber_textbox.Text + "')";
 
-            OleDbCommand myComm = new OleDbCommand(insert_sql, myConn);
-            myComm.ExecuteNonQuery();
+            new DataAccess().InsertData(insert_sql);
 
             MessageBox.Show("新增企业信息录入成功。");
         }

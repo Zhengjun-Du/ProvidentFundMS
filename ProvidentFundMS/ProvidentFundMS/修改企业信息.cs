@@ -14,8 +14,6 @@ namespace ProvidentFundMS
     public partial class ModifyEnterpriseForm : Form
     {
         public ListViewItem display_content = null;
-        private String sqlConn = null;
-        OleDbConnection myConn = null;
         string original_enterprise_name;
 
         public ModifyEnterpriseForm()
@@ -23,10 +21,6 @@ namespace ProvidentFundMS
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
-
-            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
-            myConn = new OleDbConnection(sqlConn);
-            myConn.Open();
         }
 
         private void ModifyEnterpriseForm_Load(object sender, EventArgs e)
@@ -51,8 +45,7 @@ namespace ProvidentFundMS
             update_sql += "[tel_number] = '" + this.contact_textbox.Text + "'";
             update_sql += "WHERE [enterprise_name] = '" + original_enterprise_name + "'";
 
-            OleDbCommand myComm = new OleDbCommand(update_sql, myConn);
-            myComm.ExecuteNonQuery();
+            new DataAccess().UpdateData(update_sql);
 
             MessageBox.Show("企业信息修改成功。");
         }
