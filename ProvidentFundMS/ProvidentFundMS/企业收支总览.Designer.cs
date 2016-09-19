@@ -35,6 +35,7 @@
             this.contact_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.fundaccount_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.remainder_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.enterprise_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +56,8 @@
             this.corporate_title,
             this.contact_title,
             this.fundaccount_title,
-            this.remainder_title});
+            this.remainder_title,
+            this.enterprise_id});
             this.EnterPriseIEListView.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.EnterPriseIEListView.Location = new System.Drawing.Point(19, 71);
             this.EnterPriseIEListView.Margin = new System.Windows.Forms.Padding(10);
@@ -91,7 +93,12 @@
             this.remainder_title.Text = "公积金余额";
             this.remainder_title.Width = 130;
             // 
-            // EnterpriseIEMForm
+            // enterprise_id
+            // 
+            this.enterprise_id.Text = "";
+            this.enterprise_id.Width = 0;
+            // 
+            // 企业收支总览
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +107,7 @@
             this.Controls.Add(this.EnterPriseIEListView);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "EnterpriseIEMForm";
+            this.Name = "企业收支总览";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseIEMForm_Load);
             this.ResumeLayout(false);
@@ -116,5 +123,6 @@
         private System.Windows.Forms.ColumnHeader contact_title;
         private System.Windows.Forms.ColumnHeader fundaccount_title;
         private System.Windows.Forms.ColumnHeader remainder_title;
+        private System.Windows.Forms.ColumnHeader enterprise_id;
     }
 }

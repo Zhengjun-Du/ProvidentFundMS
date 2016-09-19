@@ -45,10 +45,11 @@ namespace ProvidentFundMS
                 lvi.SubItems.Add(myReader[6].ToString());
                 lvi.SubItems.Add(myReader[5].ToString());
                 lvi.SubItems.Add(myReader[7].ToString());
+                lvi.SubItems.Add(myReader[0].ToString());
 
                 this.EnterPriseIEListView.Items.Add(lvi);
             }
-
+            
             myReader.Close();
             myConn.Close();
         }

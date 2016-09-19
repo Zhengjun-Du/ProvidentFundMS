@@ -33,12 +33,20 @@ namespace ProvidentFundMS
         {
             this.ProvidentFundDetail_ListView.Items.Clear();
 
+            myConn.Open();
+            String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;
+            OleDbCommand myComm = new OleDbCommand(selcet_sql_0, myConn);
+            OleDbDataReader myReader = myComm.ExecuteReader();
+            if (myReader.Read())
+                this.remain_label.Text = myReader["remain"].ToString();
+
+
+
             String selcet_sql  = "SELECT e.enterprise_name,";
                    selcet_sql += "i.* FROM enterprise e, incomecost i WHERE e.ID = i.enterprise_id and e.enterprise_name = '" + lv.SubItems[0].Text.ToString() + "' order by i.date";
 
-            myConn.Open();
-            OleDbCommand myComm = new OleDbCommand(selcet_sql, myConn);
-            OleDbDataReader myReader = myComm.ExecuteReader();
+            myComm = new OleDbCommand(selcet_sql, myConn);
+            myReader = myComm.ExecuteReader();
 
             int i = 1;
             while (myReader.Read())
@@ -64,8 +72,6 @@ namespace ProvidentFundMS
         {
             this.enterprise_label.Text = lv.SubItems[0].Text.ToString();
             this.provident_found_number_label.Text = lv.SubItems[3].Text.ToString();
-            this.remain_label.Text = lv.SubItems[4].Text.ToString();
-           
 
             UpDataOfListView();
         }

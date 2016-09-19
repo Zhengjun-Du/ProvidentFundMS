@@ -67,7 +67,6 @@
             this.abstract_comboBox.Name = "abstract_comboBox";
             this.abstract_comboBox.Size = new System.Drawing.Size(387, 27);
             this.abstract_comboBox.TabIndex = 56;
-            this.abstract_comboBox.Text = "企业预存";
             // 
             // exit_btn
             // 
@@ -343,7 +342,7 @@
         private System.Windows.Forms.Button exit_btn;
         private System.Windows.Forms.Button confirm_add_btn;
         private System.Windows.Forms.TextBox operator_textbox;
-        private System.Windows.Forms.TextBox remain_textbox;
+        public  System.Windows.Forms.TextBox remain_textbox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox cost_textbox;
         private System.Windows.Forms.Label label3;

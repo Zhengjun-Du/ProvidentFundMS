@@ -32,6 +32,12 @@ namespace ProvidentFundMS
 
         private void confirm_add_btn_Click(object sender, EventArgs e)
         {
+            if (this.operator_textbox.Text == "" || this.abstract_comboBox.Text == "")
+            {
+                MessageBox.Show("摘要或经办人不能为空，请重新填写！");
+                return;
+            }
+
             try
             {
                 float test_float = float.Parse(this.income_textbox.Text);
@@ -45,14 +51,7 @@ namespace ProvidentFundMS
             }
 
             myConn.Open();
-            String selcet_sql = "select ID from enterprise where enterprise_name = '" + enterprise_name + "'";
-            OleDbCommand myComm = new OleDbCommand(selcet_sql, myConn);
-            OleDbDataReader myReader = myComm.ExecuteReader();
-
-            int enterprise_id = 0;
-            if (myReader.Read())
-                enterprise_id = int.Parse(myReader[0].ToString());
-
+            int enterprise_id = int.Parse(lv.SubItems[5].Text);
             String insert_sql = "INSERT INTO incomecost ([date],[abstract],[income],[cost],[remain],[operator],[enterprise_id]) VALUES";
             insert_sql += "('" + this.date_textbox.Text + "',"
                           + "'" + this.abstract_comboBox.Text + "',"
@@ -62,38 +61,44 @@ namespace ProvidentFundMS
                           + "'" + this.operator_textbox.Text + "',"
                                 + enterprise_id + ")";
 
-            myComm = new OleDbCommand(insert_sql, myConn);
+            OleDbCommand myComm = new OleDbCommand(insert_sql, myConn);
             myComm.ExecuteNonQuery();
 
+            this.remain_label.Text = this.remain_textbox.Text;
 
 
             String update_sql = "UPDATE enterprise SET";
-            update_sql += " [remain] = " + this.remain_label.Text;
+            update_sql += " [remain] = " + this.remain_textbox.Text;
             update_sql += " WHERE [id] =" + enterprise_id;
-
-
             myComm = new OleDbCommand(update_sql, myConn);
             myComm.ExecuteNonQuery();
 
-
-            myReader.Close();
             myConn.Close();
 
             MessageBox.Show("添加记录成功。");
+            this.Close();
         }
 
         private void AddIERecordForm_Load(object sender, EventArgs e)
         {
             this.enterprise_label.Text = enterprise_name;
             this.provident_found_number_label.Text = provident_number;
-            this.remain_label.Text = lv.SubItems[4].Text.ToString();
             this.date_textbox.Text = DateTime.Now.ToString();
+
+            myConn.Open();
+            String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;
+            OleDbCommand myComm = new OleDbCommand(selcet_sql_0, myConn);
+            OleDbDataReader myReader = myComm.ExecuteReader();
+            if (myReader.Read())
+                this.remain_label.Text = myReader["remain"].ToString();
+            myConn.Close();
+
         }
 
         private void income_textbox_TextChanged(object sender, EventArgs e)
         {
-             float remain = float.Parse(remain_label.Text) + float.Parse(this.income_textbox.Text) - float.Parse(this.cost_textbox.Text);
-             this.remain_textbox.Text = remain.ToString();
+            float remain = float.Parse(remain_label.Text) + float.Parse(this.income_textbox.Text) - float.Parse(this.cost_textbox.Text);
+            this.remain_textbox.Text = remain.ToString();
         }
 
         private void cost_textbox_TextChanged(object sender, EventArgs e)
