@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProvidentFundMS
 {
-    public partial class MainForm : Form
+    public partial class 主界面 : Form
     {
-        public MainForm()
+        public 主界面()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -21,19 +21,19 @@ namespace ProvidentFundMS
 
         private void addEnterprise_btn_Click(object sender, EventArgs e)
         {
-            EnterpriseInfoManageForm enterpriseInfoManageForm = new EnterpriseInfoManageForm();
+            所有企业信息界面 enterpriseInfoManageForm = new 所有企业信息界面();
             enterpriseInfoManageForm.ShowDialog();
         }
 
         private void enterpriseIEM_btn_Click(object sender, EventArgs e)
         {
-            EnterpriseIEMForm enterpriseIEMForm = new EnterpriseIEMForm();
+            企业收支总览 enterpriseIEMForm = new 企业收支总览();
             enterpriseIEMForm.ShowDialog();
         }
 
         private void modifyAccount_btn_Click(object sender, EventArgs e)
         {
-            AccountMangeForm accountMangaForm = new AccountMangeForm();
+            修改用户名密码 accountMangaForm = new 修改用户名密码();
             accountMangaForm.ShowDialog();
         }
     }

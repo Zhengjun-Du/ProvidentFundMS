@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace ProvidentFundMS
 {
-    public partial class AccountMangeForm : Form
+    public partial class 修改用户名密码 : Form
     {
         private String sqlConn = null;
         OleDbConnection myConn = null;
 
-        public AccountMangeForm()
+        public 修改用户名密码()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -68,11 +68,7 @@ namespace ProvidentFundMS
 
         private void reset_btn_Click(object sender, EventArgs e)
         {
-            currUsername_textBox.Clear();
-            currPassword_textBox.Clear();
-            newUsername_textBox.Clear();
-            newPassword_textBox.Clear();
-            confirm_textBox.Clear();
+            this.Close();
         }
     }
 }

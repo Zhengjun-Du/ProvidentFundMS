@@ -1,6 +1,6 @@
 ﻿namespace ProvidentFundMS
 {
-    partial class EnterpriseInfoManageForm
+    partial class 所有企业信息界面
     {
         /// <summary>
         /// Required designer variable.

@@ -11,12 +11,12 @@ using System.Data.OleDb;
 
 namespace ProvidentFundMS
 {
-    public partial class LoginForm : Form
+    public partial class 登录界面 : Form
     {
         private String sqlConn = null;
         OleDbConnection myConn;
 
-        public LoginForm()
+        public 登录界面()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

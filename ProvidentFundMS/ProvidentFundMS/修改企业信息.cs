@@ -56,5 +56,10 @@ namespace ProvidentFundMS
 
             MessageBox.Show("企业信息修改成功。");
         }
+
+        private void exit_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

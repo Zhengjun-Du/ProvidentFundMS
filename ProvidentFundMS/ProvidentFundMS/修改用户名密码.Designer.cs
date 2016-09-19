@@ -1,6 +1,6 @@
 ﻿namespace ProvidentFundMS
 {
-    partial class AccountMangeForm
+    partial class 修改用户名密码
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.reset_btn.Name = "reset_btn";
             this.reset_btn.Size = new System.Drawing.Size(174, 48);
             this.reset_btn.TabIndex = 20;
-            this.reset_btn.Text = "重置";
+            this.reset_btn.Text = "退出";
             this.reset_btn.UseVisualStyleBackColor = true;
             this.reset_btn.Click += new System.EventHandler(this.reset_btn_Click);
             // 

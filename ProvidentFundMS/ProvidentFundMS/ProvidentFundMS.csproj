@@ -51,81 +51,99 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountMangeForm.cs">
+    <Compile Include="修改用户名密码.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountMangeForm.Designer.cs">
-      <DependentUpon>AccountMangeForm.cs</DependentUpon>
+    <Compile Include="修改用户名密码.Designer.cs">
+      <DependentUpon>修改用户名密码.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEnterprise.cs">
+    <Compile Include="添加企业.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEnterprise.Designer.cs">
-      <DependentUpon>AddEnterprise.cs</DependentUpon>
+    <Compile Include="添加企业.Designer.cs">
+      <DependentUpon>添加企业.cs</DependentUpon>
+    </Compile>
+    <Compile Include="添加收支记录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="添加收支记录.Designer.cs">
+      <DependentUpon>添加收支记录.cs</DependentUpon>
     </Compile>
     <Compile Include="database\ProvidentFundMSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProvidentFundMSDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EnterpriseDetailForm.cs">
+    <Compile Include="企业收支明细.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnterpriseDetailForm.Designer.cs">
-      <DependentUpon>EnterpriseDetailForm.cs</DependentUpon>
+    <Compile Include="企业收支明细.Designer.cs">
+      <DependentUpon>企业收支明细.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnterpriseIEMForm.cs">
+    <Compile Include="企业收支总览.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnterpriseIEMForm.Designer.cs">
-      <DependentUpon>EnterpriseIEMForm.cs</DependentUpon>
+    <Compile Include="企业收支总览.Designer.cs">
+      <DependentUpon>企业收支总览.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnterpriseInfoManageForm.cs">
+    <Compile Include="所有企业信息界面.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnterpriseInfoManageForm.Designer.cs">
-      <DependentUpon>EnterpriseInfoManageForm.cs</DependentUpon>
+    <Compile Include="所有企业信息界面.Designer.cs">
+      <DependentUpon>所有企业信息界面.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="登录界面.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="登录界面.Designer.cs">
+      <DependentUpon>登录界面.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="主界面.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="主界面.Designer.cs">
+      <DependentUpon>主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="修改收支明细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改收支明细.Designer.cs">
+      <DependentUpon>修改收支明细.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ModifyEnterprise.cs">
+    <Compile Include="修改企业信息.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifyEnterprise.Designer.cs">
-      <DependentUpon>ModifyEnterprise.cs</DependentUpon>
+    <Compile Include="修改企业信息.Designer.cs">
+      <DependentUpon>修改企业信息.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountMangeForm.resx">
-      <DependentUpon>AccountMangeForm.cs</DependentUpon>
+    <EmbeddedResource Include="修改用户名密码.resx">
+      <DependentUpon>修改用户名密码.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEnterprise.resx">
-      <DependentUpon>AddEnterprise.cs</DependentUpon>
+    <EmbeddedResource Include="添加企业.resx">
+      <DependentUpon>添加企业.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnterpriseDetailForm.resx">
-      <DependentUpon>EnterpriseDetailForm.cs</DependentUpon>
+    <EmbeddedResource Include="添加收支记录.resx">
+      <DependentUpon>添加收支记录.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnterpriseIEMForm.resx">
-      <DependentUpon>EnterpriseIEMForm.cs</DependentUpon>
+    <EmbeddedResource Include="企业收支明细.resx">
+      <DependentUpon>企业收支明细.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnterpriseInfoManageForm.resx">
-      <DependentUpon>EnterpriseInfoManageForm.cs</DependentUpon>
+    <EmbeddedResource Include="企业收支总览.resx">
+      <DependentUpon>企业收支总览.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="所有企业信息界面.resx">
+      <DependentUpon>所有企业信息界面.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="登录界面.resx">
+      <DependentUpon>登录界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面.resx">
+      <DependentUpon>主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="修改收支明细.resx">
+      <DependentUpon>修改收支明细.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,8 +154,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ModifyEnterprise.resx">
-      <DependentUpon>ModifyEnterprise.cs</DependentUpon>
+    <EmbeddedResource Include="修改企业信息.resx">
+      <DependentUpon>修改企业信息.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="database\ProvidentFundMS.ldb" />
     <None Include="database\ProvidentFundMSDataSet.xsc">

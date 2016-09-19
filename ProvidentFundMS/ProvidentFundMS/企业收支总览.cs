@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace ProvidentFundMS
 {
-    public partial class EnterpriseIEMForm : Form
+    public partial class 企业收支总览 : Form
     {
         private String sqlConn = null;
-        OleDbConnection myConn = null;
+        private OleDbConnection myConn = null;
 
-        public EnterpriseIEMForm()
+        public 企业收支总览()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -28,8 +28,10 @@ namespace ProvidentFundMS
             myConn = new OleDbConnection(sqlConn);
         }
 
-        private void EnterpriseIEMForm_Load(object sender, EventArgs e)
+        private void  UpdateDataOfListView()
         {
+            this.EnterPriseIEListView.Items.Clear();
+
             myConn.Open();
             String selcet_sql = "select * from enterprise";
             OleDbCommand myComm = new OleDbCommand(selcet_sql, myConn);
@@ -46,18 +48,24 @@ namespace ProvidentFundMS
 
                 this.EnterPriseIEListView.Items.Add(lvi);
             }
-            this.EnterPriseIEListView.Refresh();
+
             myReader.Close();
             myConn.Close();
+        }
+
+        private void EnterpriseIEMForm_Load(object sender, EventArgs e)
+        {
+            UpdateDataOfListView();
         }
 
         private void EnterPriseIEListView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (this.EnterPriseIEListView.SelectedIndices.Count > 0)
             {
-                EnterpriseDetailForm enterpriseDetailForm = new EnterpriseDetailForm();
+                企业收支明细 enterpriseDetailForm = new 企业收支明细();
                 enterpriseDetailForm.lv = this.EnterPriseIEListView.SelectedItems[0];
                 enterpriseDetailForm.ShowDialog();
+                UpdateDataOfListView();
             }
         }
     }

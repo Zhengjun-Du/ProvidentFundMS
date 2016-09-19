@@ -205,6 +205,7 @@
             this.exit_button.TabIndex = 6;
             this.exit_button.Text = "退出";
             this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // ModifyEnterpriseForm
             // 

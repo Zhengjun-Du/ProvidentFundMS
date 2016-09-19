@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace ProvidentFundMS
 {
-    public partial class EnterpriseInfoManageForm : Form
+    public partial class 所有企业信息界面 : Form
     {
         private String sqlConn = null;
         OleDbConnection myConn = null;
 
-        public EnterpriseInfoManageForm()
+        public 所有企业信息界面()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

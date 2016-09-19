@@ -29,6 +29,17 @@ namespace ProvidentFundMS
 
         private void addEnterprise_btn_Click(object sender, EventArgs e)
         {
+            if (this.enterpriseName_textbox.Text == "" ||
+                this.licence_textbox.Text == "" ||
+                this.corporation_textbox.Text == "" || 
+                this.enterprise_addr_textbox.Text == "" || 
+                this.provident_found_textbox.Text == "" ||
+                this.telnumber_textbox.Text == "")
+            {
+                MessageBox.Show("页面有信息为空，请重新填写！");
+                return;
+            }
+
             String insert_sql = "INSERT INTO enterprise ([enterprise_name],[licence_number],[corporation],[enterprise_addr],[provident_found_number],[tel_number]) VALUES";
             insert_sql += "('" + this.enterpriseName_textbox.Text + "',"
                           + "'" + this.licence_textbox.Text + "',"

@@ -1,6 +1,6 @@
 ﻿namespace ProvidentFundMS
 {
-    partial class MainForm
+    partial class 主界面
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(主界面));
             this.addEnterprise_btn = new System.Windows.Forms.Button();
             this.enterpriseIEM_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();

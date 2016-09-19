@@ -1,6 +1,6 @@
 ﻿namespace ProvidentFundMS
 {
-    partial class EnterpriseDetailForm
+    partial class 企业收支明细
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterpriseDetailForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(企业收支明细));
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,15 +41,13 @@
             this.expend_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.remain_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.operator_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.modify_menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.delete_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.enterprise_label = new System.Windows.Forms.Label();
             this.provident_found_number_label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1.SuspendLayout();
+            this.new_btn = new System.Windows.Forms.Button();
+            this.remain_label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +103,6 @@
             this.expend_title,
             this.remain_title,
             this.operator_title});
-            this.ProvidentFundDetail_ListView.ContextMenuStrip = this.contextMenuStrip1;
             this.ProvidentFundDetail_ListView.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ProvidentFundDetail_ListView.Location = new System.Drawing.Point(10, 185);
             this.ProvidentFundDetail_ListView.Name = "ProvidentFundDetail_ListView";
@@ -114,6 +110,7 @@
             this.ProvidentFundDetail_ListView.TabIndex = 13;
             this.ProvidentFundDetail_ListView.UseCompatibleStateImageBehavior = false;
             this.ProvidentFundDetail_ListView.View = System.Windows.Forms.View.Details;
+            this.ProvidentFundDetail_ListView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ProvidentFundDetail_ListView_MouseDoubleClick);
             // 
             // id_title
             // 
@@ -149,28 +146,6 @@
             // 
             this.operator_title.Text = "经办人";
             this.operator_title.Width = 120;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modify_menu,
-            this.delete_menu});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
-            // 
-            // modify_menu
-            // 
-            this.modify_menu.Name = "modify_menu";
-            this.modify_menu.Size = new System.Drawing.Size(100, 22);
-            this.modify_menu.Text = "修改";
-            this.modify_menu.Click += new System.EventHandler(this.modify_menu_Click);
-            // 
-            // delete_menu
-            // 
-            this.delete_menu.Name = "delete_menu";
-            this.delete_menu.Size = new System.Drawing.Size(100, 22);
-            this.delete_menu.Text = "删除";
-            this.delete_menu.Click += new System.EventHandler(this.delete_menu_Click);
             // 
             // enterprise_label
             // 
@@ -214,26 +189,51 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // button2
+            // new_btn
             // 
-            this.button2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(439, 611);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 39);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "新增记录";
-            this.button2.UseVisualStyleBackColor = true;
+            this.new_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.new_btn.Location = new System.Drawing.Point(439, 611);
+            this.new_btn.Name = "new_btn";
+            this.new_btn.Size = new System.Drawing.Size(180, 39);
+            this.new_btn.TabIndex = 14;
+            this.new_btn.Text = "新增记录";
+            this.new_btn.UseVisualStyleBackColor = true;
+            this.new_btn.Click += new System.EventHandler(this.new_btn_Click);
             // 
-            // EnterpriseDetailForm
+            // remain_label
+            // 
+            this.remain_label.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.remain_label.ForeColor = System.Drawing.Color.Red;
+            this.remain_label.Location = new System.Drawing.Point(729, 113);
+            this.remain_label.Name = "remain_label";
+            this.remain_label.Size = new System.Drawing.Size(128, 37);
+            this.remain_label.TabIndex = 11;
+            this.remain_label.Text = "0";
+            this.remain_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(580, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 37);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "公积金余额：";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // 企业收支明细
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 662);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.new_btn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ProvidentFundDetail_ListView);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.remain_label);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.provident_found_number_label);
             this.Controls.Add(this.enterprise_label);
@@ -241,10 +241,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "EnterpriseDetailForm";
+            this.Name = "企业收支明细";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseDetailForm_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -268,9 +267,8 @@
         private System.Windows.Forms.ColumnHeader operator_title;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem modify_menu;
-        private System.Windows.Forms.ToolStripMenuItem delete_menu;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button new_btn;
+        private System.Windows.Forms.Label remain_label;
+        private System.Windows.Forms.Label label4;
     }
 }
