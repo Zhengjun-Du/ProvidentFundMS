@@ -48,9 +48,9 @@ namespace ProvidentFundMS
             String insert_sql = "INSERT INTO incomecost ([date],[abstract],[income],[cost],[remain],[operator],[enterprise_id]) VALUES";
             insert_sql += "('" + this.date_textbox.Text + "',"
                           + "'" + this.abstract_comboBox.Text + "',"
-                          + "'" + this.income_textbox.Text + "',"
-                          + "'" + this.cost_textbox.Text + "',"
-                          + "'" + this.remain_textbox.Text + "',"
+                          + "" + this.income_textbox.Text + ","
+                          + "" + this.cost_textbox.Text + ","
+                          + "" + this.remain_textbox.Text + ","
                           + "'" + this.operator_textbox.Text + "',"
                                 + enterprise_id + ")";
 
@@ -83,19 +83,55 @@ namespace ProvidentFundMS
 
         private void income_textbox_TextChanged(object sender, EventArgs e)
         {
-            float remain = float.Parse(remain_label.Text) + float.Parse(this.income_textbox.Text) - float.Parse(this.cost_textbox.Text);
-            this.remain_textbox.Text = remain.ToString();
+           // float remain = float.Parse(remain_label.Text) + float.Parse(this.income_textbox.Text) - float.Parse(this.cost_textbox.Text);
+           // this.remain_textbox.Text = remain.ToString();
         }
 
         private void cost_textbox_TextChanged(object sender, EventArgs e)
         {
-            float remain = float.Parse(remain_label.Text) + float.Parse(this.income_textbox.Text) - float.Parse(this.cost_textbox.Text);
-            this.remain_textbox.Text = remain.ToString();
+           // float remain = float.Parse(remain_label.Text) + float.Parse(this.income_textbox.Text) - float.Parse(this.cost_textbox.Text);
+           // this.remain_textbox.Text = remain.ToString();
         }
 
         private void exit_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void income_textbox_Leave(object sender, EventArgs e)
+        {
+            float income = 0;
+           
+            try{
+                 income = float.Parse(this.income_textbox.Text);
+            }catch{
+                MessageBox.Show("存入额不能为空，请重新填写！");
+                this.income_textbox.Focus();
+                return;
+            }
+
+            float cost = float.Parse(this.cost_textbox.Text);
+            float remain = float.Parse(remain_label.Text) + income - cost;
+            this.remain_textbox.Text = remain.ToString();
+        }
+
+        private void cost_textbox_Leave(object sender, EventArgs e)
+        {
+            float cost = 0;
+
+            try{
+                cost = float.Parse(this.cost_textbox.Text);
+            }catch{
+                MessageBox.Show("存入额不能为空，请重新填写！");
+                this.cost_textbox.Focus();
+                return;
+            }
+
+            float income = float.Parse(this.income_textbox.Text);
+            float remain = float.Parse(remain_label.Text) + income - cost;
+            this.remain_textbox.Text = remain.ToString();
+        }
+
+
     }
 }

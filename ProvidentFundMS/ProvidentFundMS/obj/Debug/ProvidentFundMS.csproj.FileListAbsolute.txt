@@ -26,7 +26,6 @@ E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\Prov
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.csproj.GenerateResource.Cache
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.exe
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.pdb
-E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.csprojResolveAssemblyReference.cache
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\ProvidentFundMS.exe.config
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.exe
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.pdb

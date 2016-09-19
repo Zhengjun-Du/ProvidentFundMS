@@ -130,6 +130,7 @@
             this.cost_textbox.TabIndex = 50;
             this.cost_textbox.Text = "0";
             this.cost_textbox.TextChanged += new System.EventHandler(this.cost_textbox_TextChanged);
+            this.cost_textbox.Leave += new System.EventHandler(this.cost_textbox_Leave);
             // 
             // label3
             // 
@@ -151,6 +152,7 @@
             this.income_textbox.TabIndex = 45;
             this.income_textbox.Text = "0";
             this.income_textbox.TextChanged += new System.EventHandler(this.income_textbox_TextChanged);
+            this.income_textbox.Leave += new System.EventHandler(this.income_textbox_Leave);
             // 
             // label5
             // 

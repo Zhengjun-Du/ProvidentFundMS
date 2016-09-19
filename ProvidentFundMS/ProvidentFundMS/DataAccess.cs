@@ -14,7 +14,8 @@ namespace ProvidentFundMS
 
         public DataAccess()
         {
-            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
+            //sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
+            sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ProvidentFundMS.mdb";
             myConn = new OleDbConnection(sqlConn);
         }
 
