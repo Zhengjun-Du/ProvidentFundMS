@@ -44,8 +44,8 @@ namespace ProvidentFundMS
                 lvi.Text = myReader[1].ToString();
                 lvi.SubItems.Add(myReader[2].ToString());
                 lvi.SubItems.Add(myReader[3].ToString());
-                lvi.SubItems.Add(myReader[4].ToString());
                 lvi.SubItems.Add(myReader[5].ToString());
+                lvi.SubItems.Add(myReader[4].ToString());
                 lvi.SubItems.Add(myReader[6].ToString());
                 this.EnterPriseInfoListView.Items.Add(lvi);
             }
