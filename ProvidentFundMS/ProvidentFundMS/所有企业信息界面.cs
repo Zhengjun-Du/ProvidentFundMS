@@ -58,6 +58,7 @@ namespace ProvidentFundMS
             UpdateDataOfListView();
         }
 
+        /*
         private void modify_enterpriseinfo_menu_Click(object sender, EventArgs e)
         {
             if (this.EnterPriseInfoListView.SelectedIndices.Count > 0)
@@ -82,7 +83,17 @@ namespace ProvidentFundMS
                     String delete_sql = "DELETE FROM enterprise WHERE [enterprise_name] = '" + enterprise_name + "'";
                     new DataAccess().DeleteData(delete_sql);
                 }
- 
+                UpdateDataOfListView();
+            }
+        }*/
+
+        private void EnterPriseInfoListView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (this.EnterPriseInfoListView.SelectedIndices.Count > 0)
+            {
+                ModifyEnterpriseForm modifyEnterpriseForm = new ModifyEnterpriseForm();
+                modifyEnterpriseForm.display_content = this.EnterPriseInfoListView.SelectedItems[0];
+                modifyEnterpriseForm.ShowDialog();
                 UpdateDataOfListView();
             }
         }

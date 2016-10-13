@@ -44,6 +44,7 @@ namespace ProvidentFundMS
             new DataAccess().InsertData(insert_sql);
 
             MessageBox.Show("新增企业信息录入成功。");
+            this.Close();
         }
 
         private void reset_btn_Click(object sender, EventArgs e)

@@ -48,11 +48,28 @@ namespace ProvidentFundMS
             new DataAccess().UpdateData(update_sql);
 
             MessageBox.Show("企业信息修改成功。");
+
+            this.Close();
         }
 
         private void exit_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("确认删除吗？", "提示", MessageBoxButtons.OKCancel);
+            if (dr == DialogResult.OK)
+            {
+                String delete_sql = "DELETE FROM enterprise WHERE [enterprise_name] = '" + this.enterprise_textbox.Text + "'";
+                new DataAccess().DeleteData(delete_sql);
+
+                MessageBox.Show("企业信息删除成功。");
+
+                this.Close();
+            }
+
         }
     }
 }

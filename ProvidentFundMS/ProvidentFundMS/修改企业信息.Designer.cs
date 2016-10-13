@@ -45,6 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.confirm_modify_btn = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -189,9 +190,9 @@
             // confirm_modify_btn
             // 
             this.confirm_modify_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.confirm_modify_btn.Location = new System.Drawing.Point(319, 441);
+            this.confirm_modify_btn.Location = new System.Drawing.Point(257, 441);
             this.confirm_modify_btn.Name = "confirm_modify_btn";
-            this.confirm_modify_btn.Size = new System.Drawing.Size(188, 48);
+            this.confirm_modify_btn.Size = new System.Drawing.Size(134, 48);
             this.confirm_modify_btn.TabIndex = 6;
             this.confirm_modify_btn.Text = "确认修改";
             this.confirm_modify_btn.UseVisualStyleBackColor = true;
@@ -200,13 +201,24 @@
             // exit_button
             // 
             this.exit_button.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.exit_button.Location = new System.Drawing.Point(532, 441);
+            this.exit_button.Location = new System.Drawing.Point(581, 441);
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(174, 48);
+            this.exit_button.Size = new System.Drawing.Size(125, 48);
             this.exit_button.TabIndex = 6;
             this.exit_button.Text = "退出";
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
+            // 
+            // delete_btn
+            // 
+            this.delete_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.delete_btn.Location = new System.Drawing.Point(427, 441);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(125, 48);
+            this.delete_btn.TabIndex = 6;
+            this.delete_btn.Text = "删除";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // ModifyEnterpriseForm
             // 
@@ -215,6 +227,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
             this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.confirm_modify_btn);
             this.Controls.Add(this.contact_textbox);
             this.Controls.Add(this.fundaccount_textbox);
@@ -258,5 +271,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button confirm_modify_btn;
         private System.Windows.Forms.Button exit_button;
+        private System.Windows.Forms.Button delete_btn;
     }
 }

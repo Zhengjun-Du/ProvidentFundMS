@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(所有企业信息界面));
             this.EnterPriseInfoListView = new System.Windows.Forms.ListView();
             this.name_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,12 +36,8 @@
             this.licence_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.address_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contact_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.modify_enterpriseinfo_menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.delete_enterprise_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // EnterPriseInfoListView
@@ -54,7 +49,6 @@
             this.licence_title,
             this.address_title,
             this.contact_title});
-            this.EnterPriseInfoListView.ContextMenuStrip = this.contextMenuStrip1;
             this.EnterPriseInfoListView.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.EnterPriseInfoListView.Location = new System.Drawing.Point(19, 120);
             this.EnterPriseInfoListView.Margin = new System.Windows.Forms.Padding(10);
@@ -63,6 +57,7 @@
             this.EnterPriseInfoListView.TabIndex = 9;
             this.EnterPriseInfoListView.UseCompatibleStateImageBehavior = false;
             this.EnterPriseInfoListView.View = System.Windows.Forms.View.Details;
+            this.EnterPriseInfoListView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.EnterPriseInfoListView_MouseDoubleClick);
             // 
             // name_title
             // 
@@ -93,28 +88,6 @@
             // 
             this.contact_title.Text = "联系方式";
             this.contact_title.Width = 94;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modify_enterpriseinfo_menu,
-            this.delete_enterprise_menu});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
-            // 
-            // modify_enterpriseinfo_menu
-            // 
-            this.modify_enterpriseinfo_menu.Name = "modify_enterpriseinfo_menu";
-            this.modify_enterpriseinfo_menu.Size = new System.Drawing.Size(100, 22);
-            this.modify_enterpriseinfo_menu.Text = "修改";
-            this.modify_enterpriseinfo_menu.Click += new System.EventHandler(this.modify_enterpriseinfo_menu_Click);
-            // 
-            // delete_enterprise_menu
-            // 
-            this.delete_enterprise_menu.Name = "delete_enterprise_menu";
-            this.delete_enterprise_menu.Size = new System.Drawing.Size(100, 22);
-            this.delete_enterprise_menu.Text = "删除";
-            this.delete_enterprise_menu.Click += new System.EventHandler(this.delete_enterprise_menu_Click);
             // 
             // label1
             // 
@@ -152,7 +125,6 @@
             this.Name = "所有企业信息界面";
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseInfoManageForm_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -168,8 +140,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader contact_title;
         private System.Windows.Forms.Button addEnterprise_btn;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem modify_enterpriseinfo_menu;
-        private System.Windows.Forms.ToolStripMenuItem delete_enterprise_menu;
     }
 }
