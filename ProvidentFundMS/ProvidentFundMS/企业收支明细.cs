@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace ProvidentFundMS
 {
@@ -16,6 +17,7 @@ namespace ProvidentFundMS
         private String sqlConn = null;
         private OleDbConnection myConn = null;
         public ListViewItem lv = null;
+        PrintDocument myPrintDocument = new PrintDocument();
 
         public 企业收支明细()
         {
@@ -48,7 +50,7 @@ namespace ProvidentFundMS
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = (i++).ToString();
-                lvi.SubItems.Add(myReader["date"].ToString());
+                lvi.SubItems.Add(((DateTime)myReader["date"]).ToString("yyyy-MM-dd HH:mm:ss"));
                 lvi.SubItems.Add(myReader["abstract"].ToString());
                 lvi.SubItems.Add(myReader["income"].ToString());
                 lvi.SubItems.Add(myReader["cost"].ToString());
@@ -98,6 +100,54 @@ namespace ProvidentFundMS
             addIERecordForm.ShowDialog();
 
             UpDataOfListView();
+        }
+
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("新乡市三月软件公司入库单", new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 170, 10);
+            e.Graphics.DrawString("供货商:河南科技学院", new Font(new FontFamily("黑体"), 8), System.Drawing.Brushes.Blue, 10, 12);
+
+
+            String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;
+            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql_0);
+            if (myReader.Read())
+                this.remain_label.Text = myReader["remain"].ToString();
+
+            String selcet_sql = "SELECT e.enterprise_name,i.* FROM enterprise e, incomecost i ";
+            selcet_sql += " WHERE e.ID = i.enterprise_id and e.enterprise_name = '" + lv.SubItems[0].Text.ToString() + "'";
+            selcet_sql += " ORDER BY i.date";
+            myReader = new DataAccess().SelectData(selcet_sql);
+
+            int i = 1;
+            while (myReader.Read())
+            {
+                e.Graphics.DrawString((i++).ToString(), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 0, 20*i);
+                e.Graphics.DrawString(((DateTime)myReader["date"]).ToString("yyyy-MM-dd"), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 80, 20 * i);
+                e.Graphics.DrawString(myReader["abstract"].ToString(), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 200, 20 * i);
+                e.Graphics.DrawString(myReader["income"].ToString(), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 300, 20 * i);
+                e.Graphics.DrawString(myReader["cost"].ToString(), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 450, 20 * i);
+                e.Graphics.DrawString(myReader["remain"].ToString(), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 550, 20 * i);
+               // e.Graphics.DrawString(myReader["operator"].ToString(), new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 750, 20 * i);
+            }
+
+            myReader.Close();
+            myConn.Close();
+        }
+
+        private void print_btn_Click(object sender, EventArgs e)
+        {
+            myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+            printPreviewDialog1.Document = myPrintDocument;
+            printDialog1.Document = myPrintDocument;
+            DialogResult result = printDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+                myPrintDocument.Print();
+
+
+            /*DialogResult result = printPreviewDialog1.ShowDialog();
+            pageSetupDialog1.Document = myPrintDocument;
+            pageSetupDialog1.ShowDialog();  
+             */
         }
     }
 }

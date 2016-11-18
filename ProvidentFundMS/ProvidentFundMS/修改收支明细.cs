@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ProvidentFundMS
 {
     public partial class 修改收支明细 : Form
@@ -17,6 +18,7 @@ namespace ProvidentFundMS
         public string provident_number = null;
         public ListViewItem lv = null;
         string original_modifytime;
+
 
         public 修改收支明细()
         {
