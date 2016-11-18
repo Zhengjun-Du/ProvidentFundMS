@@ -75,10 +75,19 @@ namespace ProvidentFundMS
             this.provident_found_number_label.Text = provident_number;
             this.date_textbox.Text = DateTime.Now.ToString();
 
+            /*
             String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;
             OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql_0);
             if (myReader.Read())
                 this.remain_label.Text = myReader["remain"].ToString();
+            */
+
+            String selcet_sql_0 = "SELECT remain FROM incomecost WHERE enterprise_id=" + lv.SubItems[5].Text + " order by date desc" ;
+            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql_0);
+            if (myReader.Read())
+                this.remain_label.Text = myReader["remain"].ToString();
+            else
+                this.remain_label.Text = "0";
         }
 
         private void income_textbox_TextChanged(object sender, EventArgs e)
