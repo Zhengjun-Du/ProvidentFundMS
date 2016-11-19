@@ -14,24 +14,13 @@ using System.Collections;
 
 namespace ProvidentFundMS
 {
-    public class IncomeCostInfo
-    {
-        public string index;
-        public string date;
-        public string abstract_;
-        public string income;
-        public string cost;
-        public string remain;
-        public string operator_;
-    }
-
     public partial class 企业收支明细 : Form
     {
         private String sqlConn = null;
         private OleDbConnection myConn = null;
         public ListViewItem lv = null;
         PrintDocument myPrintDocument = new PrintDocument();
-        打印范围 printRangeDlg = new 打印范围();;
+        打印范围 printRangeDlg = new 打印范围();
 
         public 企业收支明细()
         {
@@ -138,38 +127,40 @@ namespace ProvidentFundMS
                 incomecoatInfo.operator_ = myReader["operator"].ToString();
 
                 IncomeCostInfos.Add(incomecoatInfo);
-            }
-            
+            } 
             myReader.Close();
             myConn.Close();
-
             if(IncomeCostInfos.Count == 0) return;
 
+            //默认为0：即打印当前记录，1：打印全部记录，2：自选范围
             int startItemIndex = IncomeCostInfos.Count -1;
             int endItemIndex = IncomeCostInfos.Count -1;
             if(printRangeDlg.selctedItem == 1)
                 startItemIndex = 0;
             else if(printRangeDlg.selctedItem == 2)
             {
-                startItemIndex = printRangeDlg.startItemIndex;
-                endItemIndex = printRangeDlg.endItemIndex;
+                startItemIndex = printRangeDlg.startItemIndex-1;
+                endItemIndex = printRangeDlg.endItemIndex-1;
             }
 
+            //如果选的记录索引大于最大记录数目，则按记录实际数目为准
+            if (endItemIndex + 1 >= IncomeCostInfos.Count) endItemIndex = IncomeCostInfos.Count - 1;
             for(int i = startItemIndex; i <= endItemIndex; i++)
             {
-                e.Graphics.DrawString(((IncomeCostInfo)IncomeCostInfos[i]).index, new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 0, 20*i);
-                e.Graphics.DrawString(((IncomeCostInfo)IncomeCostInfos[i]).date, new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 80, 20 * i);
-                e.Graphics.DrawString(((IncomeCostInfo)IncomeCostInfos[i]).abstract_, new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 200, 20 * i);
-                e.Graphics.DrawString(((IncomeCostInfo)IncomeCostInfos[i]).income, new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 300, 20 * i);
-                e.Graphics.DrawString(((IncomeCostInfo)IncomeCostInfos[i]).cost, new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 450, 20 * i);
-                e.Graphics.DrawString(((IncomeCostInfo)IncomeCostInfos[i]).remain, new Font(new FontFamily("黑体"), 11), System.Drawing.Brushes.Black, 550, 20 * i);
+                int rowIndex = i - startItemIndex;
+                IncomeCostInfo currRecord = (IncomeCostInfo)IncomeCostInfos[i];
+                e.Graphics.DrawString(currRecord.index,     new Font(new FontFamily("宋体"), 11), Brushes.Black, 30,  50 + 20 * rowIndex);
+                e.Graphics.DrawString(currRecord.date,      new Font(new FontFamily("宋体"), 11), Brushes.Black, 80,  50 + 20 * rowIndex);
+                e.Graphics.DrawString(currRecord.abstract_, new Font(new FontFamily("宋体"), 11), Brushes.Black, 180, 50 + 20 * rowIndex);
+                e.Graphics.DrawString(currRecord.income,    new Font(new FontFamily("宋体"), 11), Brushes.Black, 280, 50 + 20 * rowIndex);
+                e.Graphics.DrawString(currRecord.cost,      new Font(new FontFamily("宋体"), 11), Brushes.Black, 380, 50 + 20 * rowIndex);
+                e.Graphics.DrawString(currRecord.remain,    new Font(new FontFamily("宋体"), 11), Brushes.Black, 480, 50 + 20 * rowIndex);
             }
         }
 
         private void print_btn_Click(object sender, EventArgs e)
         {
             myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-            printPreviewDialog1.Document = myPrintDocument;
             printDialog1.Document = myPrintDocument;
             DialogResult result = printDialog1.ShowDialog();
             if (result == DialogResult.OK)
@@ -180,5 +171,26 @@ namespace ProvidentFundMS
         {
             printRangeDlg.ShowDialog();
         }
+
+        private void preViewBtn_Click(object sender, EventArgs e)
+        {
+            myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+            printPreviewDialog.Document = myPrintDocument;
+            ((Form)(printPreviewDialog)).WindowState = FormWindowState.Maximized;
+            printPreviewDialog.PrintPreviewControl.Zoom = 1.5;
+            printPreviewDialog.ShowDialog();
+        }
+    }
+
+    //显示的报表信息
+    public class IncomeCostInfo
+    {
+        public string index;
+        public string date;
+        public string abstract_;
+        public string income;
+        public string cost;
+        public string remain;
+        public string operator_;
     }
 }

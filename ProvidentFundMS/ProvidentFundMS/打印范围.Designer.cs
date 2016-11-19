@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown_end = new System.Windows.Forms.NumericUpDown();
             this.printDialog = new System.Windows.Forms.PrintDialog();
+            this.ok_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_end)).BeginInit();
             this.SuspendLayout();
@@ -92,9 +93,24 @@
             // 
             this.numericUpDown_start.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.numericUpDown_start.Location = new System.Drawing.Point(153, 149);
+            this.numericUpDown_start.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown_start.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown_start.Name = "numericUpDown_start";
             this.numericUpDown_start.Size = new System.Drawing.Size(37, 26);
             this.numericUpDown_start.TabIndex = 2;
+            this.numericUpDown_start.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown_start.ValueChanged += new System.EventHandler(this.numericUpDown_start_ValueChanged);
             // 
             // label2
@@ -111,21 +127,48 @@
             // 
             this.numericUpDown_end.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.numericUpDown_end.Location = new System.Drawing.Point(231, 149);
+            this.numericUpDown_end.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown_end.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown_end.Name = "numericUpDown_end";
             this.numericUpDown_end.Size = new System.Drawing.Size(37, 26);
             this.numericUpDown_end.TabIndex = 2;
+            this.numericUpDown_end.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown_end.ValueChanged += new System.EventHandler(this.numericUpDown_end_ValueChanged);
             // 
             // printDialog
             // 
             this.printDialog.UseEXDialog = true;
             // 
+            // ok_btn
+            // 
+            this.ok_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ok_btn.Location = new System.Drawing.Point(29, 203);
+            this.ok_btn.Name = "ok_btn";
+            this.ok_btn.Size = new System.Drawing.Size(122, 41);
+            this.ok_btn.TabIndex = 3;
+            this.ok_btn.Text = "确 定";
+            this.ok_btn.UseVisualStyleBackColor = true;
+            this.ok_btn.Click += new System.EventHandler(this.ok_btn_Click);
+            // 
             // 打印范围
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(425, 214);
+            this.ClientSize = new System.Drawing.Size(425, 270);
+            this.Controls.Add(this.ok_btn);
             this.Controls.Add(this.numericUpDown_end);
             this.Controls.Add(this.numericUpDown_start);
             this.Controls.Add(this.radioBtn_setrange);
@@ -153,5 +196,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown_end;
         private System.Windows.Forms.PrintDialog printDialog;
+        private System.Windows.Forms.Button ok_btn;
     }
 }

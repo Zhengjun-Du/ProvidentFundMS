@@ -14,8 +14,8 @@ namespace ProvidentFundMS
     public partial class 打印范围 : Form
     {
         public int selctedItem = 0;
-        public int startItemIndex = 0;
-        public int endItemIndex = 0;
+        public int startItemIndex = 1;
+        public int endItemIndex = 1;
 
         public 打印范围()
         {
@@ -47,6 +47,11 @@ namespace ProvidentFundMS
         private void numericUpDown_end_ValueChanged(object sender, EventArgs e)
         {
             endItemIndex = Convert.ToInt32(numericUpDown_end.Value);
+        }
+
+        private void ok_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

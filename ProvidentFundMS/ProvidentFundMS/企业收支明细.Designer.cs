@@ -50,10 +50,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printSet_btn = new System.Windows.Forms.Button();
+            this.preViewBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,16 +181,16 @@
             this.print_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.print_btn.Location = new System.Drawing.Point(744, 611);
             this.print_btn.Name = "print_btn";
-            this.print_btn.Size = new System.Drawing.Size(139, 39);
+            this.print_btn.Size = new System.Drawing.Size(124, 39);
             this.print_btn.TabIndex = 14;
-            this.print_btn.Text = "打印";
+            this.print_btn.Text = "打 印";
             this.print_btn.UseVisualStyleBackColor = true;
             this.print_btn.Click += new System.EventHandler(this.print_btn_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(538, 611);
+            this.pictureBox3.Location = new System.Drawing.Point(426, 611);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 39);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,15 +234,15 @@
             // 
             this.printDocument2.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument2_PrintPage);
             // 
-            // printPreviewDialog1
+            // printPreviewDialog
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog.Enabled = true;
+            this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
+            this.printPreviewDialog.Name = "printPreviewDialog";
+            this.printPreviewDialog.Visible = false;
             // 
             // printDialog1
             // 
@@ -249,14 +250,25 @@
             // 
             // printSet_btn
             // 
-            this.printSet_btn.Font = new System.Drawing.Font("宋体", 12F);
-            this.printSet_btn.Location = new System.Drawing.Point(593, 611);
+            this.printSet_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.printSet_btn.Location = new System.Drawing.Point(479, 611);
             this.printSet_btn.Name = "printSet_btn";
-            this.printSet_btn.Size = new System.Drawing.Size(139, 39);
+            this.printSet_btn.Size = new System.Drawing.Size(122, 39);
             this.printSet_btn.TabIndex = 16;
             this.printSet_btn.Text = "打印范围设定";
             this.printSet_btn.UseVisualStyleBackColor = true;
             this.printSet_btn.Click += new System.EventHandler(this.printSet_btn_Click);
+            // 
+            // preViewBtn
+            // 
+            this.preViewBtn.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.preViewBtn.Location = new System.Drawing.Point(615, 612);
+            this.preViewBtn.Name = "preViewBtn";
+            this.preViewBtn.Size = new System.Drawing.Size(113, 38);
+            this.preViewBtn.TabIndex = 17;
+            this.preViewBtn.Text = "打印预览";
+            this.preViewBtn.UseVisualStyleBackColor = true;
+            this.preViewBtn.Click += new System.EventHandler(this.preViewBtn_Click);
             // 
             // 企业收支明细
             // 
@@ -264,6 +276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 662);
+            this.Controls.Add(this.preViewBtn);
             this.Controls.Add(this.printSet_btn);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.new_btn);
@@ -310,9 +323,10 @@
         private System.Windows.Forms.Label label4;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Drawing.Printing.PrintDocument printDocument2;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Button printSet_btn;
+        private System.Windows.Forms.Button preViewBtn;
     }
 }
