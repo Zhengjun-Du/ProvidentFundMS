@@ -52,7 +52,7 @@
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printSet_btn = new System.Windows.Forms.Button();
             this.preViewBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -244,18 +244,19 @@
             this.printPreviewDialog.Name = "printPreviewDialog";
             this.printPreviewDialog.Visible = false;
             // 
-            // printDialog1
+            // printDialog
             // 
-            this.printDialog1.UseEXDialog = true;
+            this.printDialog.UseEXDialog = true;
             // 
             // printSet_btn
             // 
             this.printSet_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.printSet_btn.Location = new System.Drawing.Point(479, 611);
             this.printSet_btn.Name = "printSet_btn";
+            this.printSet_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.printSet_btn.Size = new System.Drawing.Size(122, 39);
             this.printSet_btn.TabIndex = 16;
-            this.printSet_btn.Text = "打印范围设定";
+            this.printSet_btn.Text = "打印范围对话框设定";
             this.printSet_btn.UseVisualStyleBackColor = true;
             this.printSet_btn.Click += new System.EventHandler(this.printSet_btn_Click);
             // 
@@ -325,7 +326,7 @@
         private System.Drawing.Printing.PrintDocument printDocument2;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintDialog printDialog;
         private System.Windows.Forms.Button printSet_btn;
         private System.Windows.Forms.Button preViewBtn;
     }

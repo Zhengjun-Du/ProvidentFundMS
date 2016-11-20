@@ -16,11 +16,18 @@ namespace ProvidentFundMS
 {
     public partial class 企业收支明细 : Form
     {
+        private const int ALL_NOT_PRINTED_RECORDS = 0;
+        private const int ALL_RECORDS = 1;
+
         private String sqlConn = null;
         private OleDbConnection myConn = null;
         public ListViewItem lv = null;
-        PrintDocument myPrintDocument = new PrintDocument();
-        打印范围 printRangeDlg = new 打印范围();
+        private PrintDocument myPrintDocument = new PrintDocument();
+        private 打印范围对话框 printRangeDlg = new 打印范围对话框();
+        private int currentPrintRowIndex = 0;
+        private bool printOrPreview = true;
+        private List<IncomeCostRecord> AllIncomeCostRecords = new List<IncomeCostRecord>();
+        private List<IncomeCostRecord> ToPrintIncomeCostRecords = new List<IncomeCostRecord>();
 
         public 企业收支明细()
         {
@@ -37,31 +44,46 @@ namespace ProvidentFundMS
         private void UpDataOfListView()
         {
             this.ProvidentFundDetail_ListView.Items.Clear();
+            this.AllIncomeCostRecords.Clear();
 
             String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;
             OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql_0);
             if (myReader.Read())
                 this.remain_label.Text = myReader["remain"].ToString();
 
-            String selcet_sql  = "SELECT e.enterprise_name,i.* FROM enterprise e, incomecost i ";
+            String selcet_sql = "SELECT e.enterprise_name,i.* FROM enterprise e, incomecost i ";
             selcet_sql += " WHERE e.ID = i.enterprise_id and e.enterprise_name = '" + lv.SubItems[0].Text.ToString() + "'";
             selcet_sql += " ORDER BY i.date";
             myReader = new DataAccess().SelectData(selcet_sql);
 
-            int i = 1;
+            int i = 0;
             while (myReader.Read())
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.Text = (i++).ToString();
-                lvi.SubItems.Add(((DateTime)myReader["date"]).ToString("yyyy-MM-dd HH:mm:ss"));
+                lvi.Text = (i+1).ToString();
+                lvi.SubItems.Add(((DateTime)myReader["date"]).ToString("yyyyMMdd"));
                 lvi.SubItems.Add(myReader["abstract"].ToString());
-                lvi.SubItems.Add(((float)myReader["income"]).ToString("0.00").PadLeft(10,' '));
+                lvi.SubItems.Add(((float)myReader["income"]).ToString("0.00").PadLeft(10, ' '));
                 lvi.SubItems.Add(((float)myReader["cost"]).ToString("0.00").PadLeft(10, ' '));
                 lvi.SubItems.Add(((float)myReader["remain"]).ToString("0.00").PadLeft(10, ' '));
                 lvi.SubItems.Add(myReader["operator"].ToString());
-
                 this.ProvidentFundDetail_ListView.Items.Add(lvi);
+
+                IncomeCostRecord incomecoatrecord = new IncomeCostRecord();
+                incomecoatrecord.record_id = (int)myReader["ID"];
+                incomecoatrecord.seqnum = (i).ToString();
+                incomecoatrecord.date = ((DateTime)myReader["date"]).ToString("yyyyMMdd");
+                incomecoatrecord.abstract_ = myReader["abstract"].ToString();
+                incomecoatrecord.income = ((float)myReader["income"]).ToString("0.00").PadLeft(10, ' ');
+                incomecoatrecord.cost = ((float)myReader["cost"]).ToString("0.00").PadLeft(10, ' ');
+                incomecoatrecord.remain = ((float)myReader["remain"]).ToString("0.00").PadLeft(10, ' ');
+                incomecoatrecord.operator_ = myReader["operator"].ToString();
+                incomecoatrecord.printed = (myReader["printed"].ToString() == "False") ? false : true;
+                this.AllIncomeCostRecords.Add(incomecoatrecord);
+
+                i++;
             }
+
             this.ProvidentFundDetail_ListView.Refresh();
 
             myReader.Close();
@@ -75,7 +97,6 @@ namespace ProvidentFundMS
 
             UpDataOfListView();
         }
-
 
         private void ProvidentFundDetail_ListView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -105,92 +126,77 @@ namespace ProvidentFundMS
             UpDataOfListView();
         }
 
-        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            ArrayList IncomeCostInfos = new ArrayList();
-
-            String selcet_sql = "SELECT e.enterprise_name,i.* FROM enterprise e, incomecost i ";
-            selcet_sql += " WHERE e.ID = i.enterprise_id and e.enterprise_name = '" + lv.SubItems[0].Text.ToString() + "'";
-            selcet_sql += " ORDER BY i.date";
-            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql);
-            int itemIndex = 1;
-            while (myReader.Read())
-            {
-                IncomeCostInfo incomecoatInfo = new IncomeCostInfo();
-
-                incomecoatInfo.index = (itemIndex++).ToString();
-                incomecoatInfo.date = ((DateTime)myReader["date"]).ToString("yyyy-MM-dd");
-                incomecoatInfo.abstract_ = myReader["abstract"].ToString();
-                incomecoatInfo.income = ((float)myReader["income"]).ToString("0.00").PadLeft(10,' ');
-                incomecoatInfo.cost = ((float)myReader["cost"]).ToString("0.00").PadLeft(10, ' ');
-                incomecoatInfo.remain = ((float)myReader["remain"]).ToString("0.00").PadLeft(10, ' ');
-                incomecoatInfo.operator_ = myReader["operator"].ToString();
-
-                IncomeCostInfos.Add(incomecoatInfo);
-            } 
-            myReader.Close();
-            myConn.Close();
-            if(IncomeCostInfos.Count == 0) return;
-
-            //默认为0：即打印当前记录，1：打印全部记录，2：自选范围
-            int startItemIndex = IncomeCostInfos.Count -1;
-            int endItemIndex = IncomeCostInfos.Count -1;
-            if(printRangeDlg.selctedItem == 1)
-                startItemIndex = 0;
-            else if(printRangeDlg.selctedItem == 2)
-            {
-                startItemIndex = printRangeDlg.startItemIndex-1;
-                endItemIndex = printRangeDlg.endItemIndex-1;
-            }
-
-            //如果选的记录索引大于最大记录数目，则按记录实际数目为准
-            if (endItemIndex + 1 >= IncomeCostInfos.Count) endItemIndex = IncomeCostInfos.Count - 1;
-            for(int i = startItemIndex; i <= endItemIndex; i++)
-            {
-                int rowIndex = i - startItemIndex;
-                IncomeCostInfo currRecord = (IncomeCostInfo)IncomeCostInfos[i];
-                e.Graphics.DrawString(currRecord.index,     new Font(new FontFamily("宋体"), 11), Brushes.Black, 30,  50 + 20 * rowIndex);
-                e.Graphics.DrawString(currRecord.date,      new Font(new FontFamily("宋体"), 11), Brushes.Black, 80,  50 + 20 * rowIndex);
-                e.Graphics.DrawString(currRecord.abstract_, new Font(new FontFamily("宋体"), 11), Brushes.Black, 180, 50 + 20 * rowIndex);
-                e.Graphics.DrawString(currRecord.income,    new Font(new FontFamily("宋体"), 11), Brushes.Black, 280, 50 + 20 * rowIndex);
-                e.Graphics.DrawString(currRecord.cost,      new Font(new FontFamily("宋体"), 11), Brushes.Black, 380, 50 + 20 * rowIndex);
-                e.Graphics.DrawString(currRecord.remain,    new Font(new FontFamily("宋体"), 11), Brushes.Black, 480, 50 + 20 * rowIndex);
-            }
-        }
-
-        private void print_btn_Click(object sender, EventArgs e)
-        {
-            myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
-            printDialog1.Document = myPrintDocument;
-            DialogResult result = printDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-                myPrintDocument.Print();
-        }
-
         private void printSet_btn_Click(object sender, EventArgs e)
         {
             printRangeDlg.ShowDialog();
         }
 
+        private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            PrintController printController = new PrintController(ToPrintIncomeCostRecords, printOrPreview);
+            currentPrintRowIndex = printController.OutputIncomeCostRecords(e, currentPrintRowIndex);
+        }
+
+        //打印按钮事件
+        private void print_btn_Click(object sender, EventArgs e)
+        { 
+            if (ALL_NOT_PRINTED_RECORDS == printRangeDlg.selctedItem)
+            {
+                ToPrintIncomeCostRecords = (from IncomeCostRecord item in AllIncomeCostRecords where item.printed == false select item).ToList();
+                if (ToPrintIncomeCostRecords.Count == 0)
+                {
+                    MessageBox.Show("没有未打印的数据！"); 
+                    return;
+                }
+            }
+            else
+            {
+                ToPrintIncomeCostRecords = AllIncomeCostRecords;
+                if (ToPrintIncomeCostRecords.Count == 0)
+                {
+                    MessageBox.Show("没有数据！"); 
+                    return;
+                }
+            }
+
+            printOrPreview = true;
+            currentPrintRowIndex = Convert.ToInt32(ToPrintIncomeCostRecords[0].seqnum);
+            myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
+            printDialog.Document = myPrintDocument;
+            DialogResult result = printDialog.ShowDialog();
+            if (result == DialogResult.OK)
+                myPrintDocument.Print();
+        }
+
+        //打印预览按钮事件
         private void preViewBtn_Click(object sender, EventArgs e)
         {
+            if (ALL_NOT_PRINTED_RECORDS == printRangeDlg.selctedItem)
+            {
+                ToPrintIncomeCostRecords = (from IncomeCostRecord item in AllIncomeCostRecords where item.printed == false select item).ToList();
+                if (ToPrintIncomeCostRecords.Count == 0)
+                {
+                    MessageBox.Show("没有未打印的数据！"); 
+                    return;
+                }
+            }
+            else
+            {
+                ToPrintIncomeCostRecords = AllIncomeCostRecords;
+                if (ToPrintIncomeCostRecords.Count == 0)
+                {
+                    MessageBox.Show("没有数据！");  
+                    return;
+                }
+            }
+
+            printOrPreview = false;
+            currentPrintRowIndex = Convert.ToInt32(ToPrintIncomeCostRecords[0].seqnum);
             myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
             printPreviewDialog.Document = myPrintDocument;
             ((Form)(printPreviewDialog)).WindowState = FormWindowState.Maximized;
             printPreviewDialog.PrintPreviewControl.Zoom = 1.5;
             printPreviewDialog.ShowDialog();
         }
-    }
-
-    //显示的报表信息
-    public class IncomeCostInfo
-    {
-        public string index;
-        public string date;
-        public string abstract_;
-        public string income;
-        public string cost;
-        public string remain;
-        public string operator_;
     }
 }
