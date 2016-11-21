@@ -87,6 +87,32 @@ namespace ProvidentFundMS
             }
         }*/
 
+        private void UpdateDataOfListViewBySearch(string search_str)
+        {
+            this.EnterPriseInfoListView.Items.Clear();
+
+
+            String selcet_sql = "select * from enterprise where enterprise_name like '%" + search_str + "%'";
+            if (search_str == "")
+                selcet_sql = "select * from enterprise";
+
+            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql);
+
+            while (myReader.Read())
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = myReader[1].ToString();
+                lvi.SubItems.Add(myReader[2].ToString());
+                lvi.SubItems.Add(myReader[3].ToString());
+                lvi.SubItems.Add(myReader[5].ToString());
+                lvi.SubItems.Add(myReader[4].ToString());
+                lvi.SubItems.Add(myReader[6].ToString());
+                this.EnterPriseInfoListView.Items.Add(lvi);
+            }
+
+            myReader.Close();
+        }
+
         private void EnterPriseInfoListView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (this.EnterPriseInfoListView.SelectedIndices.Count > 0)
@@ -96,6 +122,11 @@ namespace ProvidentFundMS
                 modifyEnterpriseForm.ShowDialog();
                 UpdateDataOfListView();
             }
+        }
+
+        private void search_textbox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateDataOfListViewBySearch(search_textbox.Text.Trim());
         }
     }
 }

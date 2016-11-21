@@ -38,6 +38,8 @@
             this.contact_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.addEnterprise_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.search_textbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // EnterPriseInfoListView
@@ -103,13 +105,32 @@
             // addEnterprise_btn
             // 
             this.addEnterprise_btn.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addEnterprise_btn.Location = new System.Drawing.Point(647, 55);
+            this.addEnterprise_btn.Location = new System.Drawing.Point(647, 59);
             this.addEnterprise_btn.Name = "addEnterprise_btn";
-            this.addEnterprise_btn.Size = new System.Drawing.Size(241, 42);
+            this.addEnterprise_btn.Size = new System.Drawing.Size(241, 38);
             this.addEnterprise_btn.TabIndex = 11;
             this.addEnterprise_btn.Text = "新增企业录入";
             this.addEnterprise_btn.UseVisualStyleBackColor = true;
             this.addEnterprise_btn.Click += new System.EventHandler(this.addEnterprise_btn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(21, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 19);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "按名称搜索:";
+            // 
+            // search_textbox
+            // 
+            this.search_textbox.Font = new System.Drawing.Font("宋体", 14F);
+            this.search_textbox.Location = new System.Drawing.Point(147, 68);
+            this.search_textbox.Name = "search_textbox";
+            this.search_textbox.Size = new System.Drawing.Size(375, 29);
+            this.search_textbox.TabIndex = 12;
+            this.search_textbox.TextChanged += new System.EventHandler(this.search_textbox_TextChanged);
             // 
             // 所有企业信息界面
             // 
@@ -117,6 +138,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 657);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.search_textbox);
             this.Controls.Add(this.addEnterprise_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EnterPriseInfoListView);
@@ -126,6 +149,7 @@
             this.Text = "城西区环新宁广场商圈党建公积金管理系统";
             this.Load += new System.EventHandler(this.EnterpriseInfoManageForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,5 +164,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader contact_title;
         private System.Windows.Forms.Button addEnterprise_btn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox search_textbox;
     }
 }

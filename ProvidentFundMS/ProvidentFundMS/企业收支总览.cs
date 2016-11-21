@@ -59,5 +59,48 @@ namespace ProvidentFundMS
                 UpdateDataOfListView();
             }
         }
+
+        private void UpdateDataOfListViewBySearch(string search_str)
+        {
+            this.EnterPriseIEListView.Items.Clear();
+
+            String selcet_sql = "select * from enterprise where enterprise_name like '%" + search_str + "%'";
+            if (search_str == "")
+                selcet_sql = "select * from enterprise";
+
+            OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql);
+
+            while (myReader.Read())
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = myReader[1].ToString();
+                lvi.SubItems.Add(myReader[3].ToString());
+                lvi.SubItems.Add(myReader[6].ToString());
+                lvi.SubItems.Add(myReader[5].ToString());
+                lvi.SubItems.Add(myReader[7].ToString());
+                lvi.SubItems.Add(myReader[0].ToString());
+
+                this.EnterPriseIEListView.Items.Add(lvi);
+            }
+            myReader.Close();
+        }
+
+        private void search_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+            {            
+                 UpdateDataOfListViewBySearch(search_textbox.Text.Trim());
+            }
+        }
+
+        private void all_enterprise_btn_Click(object sender, EventArgs e)
+        {
+            UpdateDataOfListView();
+        }
+
+        private void search_textbox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateDataOfListViewBySearch(search_textbox.Text.Trim());
+        }
     }
 }

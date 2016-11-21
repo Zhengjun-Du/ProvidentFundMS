@@ -4,6 +4,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProvidentFundMS
 {
@@ -28,31 +29,60 @@ namespace ProvidentFundMS
 
         public OleDbDataReader SelectData(string select_sql)
         {
-            myConn.Open();
-            OleDbCommand myComm = new OleDbCommand(select_sql, myConn);
-            OleDbDataReader myReader = myComm.ExecuteReader();
-            return myReader;
+            try
+            {
+                myConn.Open();
+                OleDbCommand myComm = new OleDbCommand(select_sql, myConn);
+                OleDbDataReader myReader = myComm.ExecuteReader();
+                return myReader;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
 
         public void DeleteData(string delete_sql)
         {
+            try
+            {
             myConn.Open();
             OleDbCommand myComm = new OleDbCommand(delete_sql, myConn);
             myComm.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void InsertData(string insert_sql)
         {
+            try
+            {
             myConn.Open();
             OleDbCommand myComm = new OleDbCommand(insert_sql, myConn);
             myComm.ExecuteNonQuery();
+                 }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void UpdateData(string update_sql)
         {
+            try
+            {
             myConn.Open();
             OleDbCommand myComm = new OleDbCommand(update_sql, myConn);
             myComm.ExecuteNonQuery();
+                 }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

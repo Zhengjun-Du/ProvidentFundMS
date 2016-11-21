@@ -18,14 +18,15 @@ namespace ProvidentFundMS
     {
         private const int ALL_NOT_PRINTED_RECORDS = 0;
         private const int ALL_RECORDS = 1;
+        private const int PRINT = 0;
+        private const int PRINT_PREVIEW = 1;
 
         private String sqlConn = null;
         private OleDbConnection myConn = null;
         public ListViewItem lv = null;
-        private PrintDocument myPrintDocument = new PrintDocument();
         private 打印范围对话框 printRangeDlg = new 打印范围对话框();
         private int currentPrintRowIndex = 0;
-        private bool printOrPreview = true;
+        private int printOrPreview = PRINT_PREVIEW;
         private List<IncomeCostRecord> AllIncomeCostRecords = new List<IncomeCostRecord>();
         private List<IncomeCostRecord> ToPrintIncomeCostRecords = new List<IncomeCostRecord>();
 
@@ -159,8 +160,10 @@ namespace ProvidentFundMS
                 }
             }
 
-            printOrPreview = true;
+            printOrPreview = PRINT;
             currentPrintRowIndex = Convert.ToInt32(ToPrintIncomeCostRecords[0].seqnum);
+            PrintDocument myPrintDocument = new PrintDocument();
+            myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("Custum", 500, 300);
             myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
             printDialog.Document = myPrintDocument;
             DialogResult result = printDialog.ShowDialog();
@@ -190,8 +193,10 @@ namespace ProvidentFundMS
                 }
             }
 
-            printOrPreview = false;
+            printOrPreview = PRINT_PREVIEW;            
             currentPrintRowIndex = Convert.ToInt32(ToPrintIncomeCostRecords[0].seqnum);
+            PrintDocument myPrintDocument = new PrintDocument();
+            myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("Custum", 500, 300);
             myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
             printPreviewDialog.Document = myPrintDocument;
             ((Form)(printPreviewDialog)).WindowState = FormWindowState.Maximized;

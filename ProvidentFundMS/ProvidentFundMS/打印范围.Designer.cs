@@ -41,7 +41,7 @@
             this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(25, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 19);
+            this.label1.Size = new System.Drawing.Size(199, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "打印范围对话框设定：";
             // 
