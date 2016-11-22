@@ -179,7 +179,7 @@
             // print_btn
             // 
             this.print_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.print_btn.Location = new System.Drawing.Point(744, 611);
+            this.print_btn.Location = new System.Drawing.Point(761, 611);
             this.print_btn.Name = "print_btn";
             this.print_btn.Size = new System.Drawing.Size(124, 39);
             this.print_btn.TabIndex = 14;
@@ -253,17 +253,17 @@
             this.printSet_btn.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.printSet_btn.Location = new System.Drawing.Point(479, 611);
             this.printSet_btn.Name = "printSet_btn";
-            this.printSet_btn.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.printSet_btn.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.printSet_btn.Size = new System.Drawing.Size(122, 39);
             this.printSet_btn.TabIndex = 16;
-            this.printSet_btn.Text = "打印范围对话框设定";
+            this.printSet_btn.Text = "打印范围设定";
             this.printSet_btn.UseVisualStyleBackColor = true;
             this.printSet_btn.Click += new System.EventHandler(this.printSet_btn_Click);
             // 
             // preViewBtn
             // 
             this.preViewBtn.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.preViewBtn.Location = new System.Drawing.Point(615, 612);
+            this.preViewBtn.Location = new System.Drawing.Point(626, 612);
             this.preViewBtn.Name = "preViewBtn";
             this.preViewBtn.Size = new System.Drawing.Size(113, 38);
             this.preViewBtn.TabIndex = 17;

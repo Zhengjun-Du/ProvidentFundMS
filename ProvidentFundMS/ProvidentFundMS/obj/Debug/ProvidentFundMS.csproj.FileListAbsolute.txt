@@ -108,3 +108,4 @@ E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.Properties.Resources.resources
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.企业收支明细.resources
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.打印范围对话框.resources
+F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.打印范围对话框.resources
