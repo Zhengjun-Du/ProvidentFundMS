@@ -73,7 +73,7 @@ namespace ProvidentFundMS
         {
             this.enterprise_label.Text = enterprise_name;
             this.provident_found_number_label.Text = provident_number;
-            this.date_textbox.Text = DateTime.Now.ToString();
+            this.date_textbox.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             /*
             String selcet_sql_0 = "SELECT remain FROM enterprise WHERE id=" + lv.SubItems[5].Text;

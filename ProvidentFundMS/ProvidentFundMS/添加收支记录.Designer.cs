@@ -62,9 +62,11 @@
             "企业预存",
             "商圈配套",
             "党费返补",
-            "会议支出",
-            "党建支出"});
-            this.abstract_comboBox.Location = new System.Drawing.Point(290, 277);
+            "阵地建设",
+            "党群活动",
+            "教育培训",
+            "其他支出"});
+            this.abstract_comboBox.Location = new System.Drawing.Point(290, 271);
             this.abstract_comboBox.Name = "abstract_comboBox";
             this.abstract_comboBox.Size = new System.Drawing.Size(387, 27);
             this.abstract_comboBox.TabIndex = 56;
@@ -136,7 +138,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(164, 435);
+            this.label3.Location = new System.Drawing.Point(164, 438);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 37);
             this.label3.TabIndex = 44;
@@ -190,7 +192,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(162, 264);
+            this.label9.Location = new System.Drawing.Point(162, 268);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 37);
             this.label9.TabIndex = 48;

@@ -45,7 +45,6 @@ E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\
 E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.EnterpriseDetailForm.resources
 E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.EnterpriseInfoManageForm.resources
 E:\我的项目\城西公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.ModifyEnterpriseForm.resources
-E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\bin\Debug\database\ProvidentFundMS.mdb
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.ModifyEnterpriseForm.resources
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.修改用户名密码.resources
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.修改收支明细.resources
@@ -109,3 +108,5 @@ E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.企业收支明细.resources
 E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.打印范围对话框.resources
 F:\我的项目\党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.打印范围对话框.resources
+E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.csprojResolveAssemblyReference.cache
+E:\我的项目\城西党建公积金管理\ProvidentFundMS\ProvidentFundMS\ProvidentFundMS\obj\Debug\ProvidentFundMS.打印范围对话框.resources
