@@ -25,12 +25,12 @@ namespace ProvidentFundMS
 
         private void ModifyEnterpriseForm_Load(object sender, EventArgs e)
         {
-            this.enterprise_textbox.Text = display_content.Text;
-            this.licence_textbox.Text = display_content.SubItems[1].Text.ToString();
+            this.enterprise_textbox.Text = display_content.SubItems[0].Text.ToString();
+            this.licence_textbox.Text = display_content.SubItems[3].Text.ToString();
             this.corporate_textbox.Text = display_content.SubItems[2].Text.ToString();
-            this.enterprise_addr_textbox.Text = display_content.SubItems[3].Text.ToString();
-            this.fundaccount_textbox.Text = display_content.SubItems[4].Text.ToString();
-            this.contact_textbox.Text = display_content.SubItems[4].Text.ToString();
+            this.enterprise_addr_textbox.Text = display_content.SubItems[4].Text.ToString();
+            this.fundaccount_textbox.Text = display_content.SubItems[1].Text.ToString();
+            this.contact_textbox.Text = display_content.SubItems[5].Text.ToString();
 
             original_enterprise_name = display_content.Text;
         }

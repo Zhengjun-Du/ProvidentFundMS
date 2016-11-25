@@ -33,11 +33,18 @@ namespace ProvidentFundMS
 
             while (myReader.Read())
             {
+                string s1 = myReader[1].ToString();
+                string s2 = myReader[2].ToString();
+                string s3 = myReader[3].ToString();
+                string s4 = myReader[4].ToString();
+                string s5 = myReader[5].ToString();
+                string s6 = myReader[6].ToString();
+
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = myReader[1].ToString();
-                lvi.SubItems.Add(myReader[2].ToString());
-                lvi.SubItems.Add(myReader[3].ToString());
                 lvi.SubItems.Add(myReader[5].ToString());
+                lvi.SubItems.Add(myReader[3].ToString());
+                lvi.SubItems.Add(myReader[2].ToString());
                 lvi.SubItems.Add(myReader[4].ToString());
                 lvi.SubItems.Add(myReader[6].ToString());
                 this.EnterPriseInfoListView.Items.Add(lvi);
