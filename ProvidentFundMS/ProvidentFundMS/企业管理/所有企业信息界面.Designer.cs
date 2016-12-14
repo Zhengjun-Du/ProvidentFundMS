@@ -89,7 +89,7 @@
             // contact_title
             // 
             this.contact_title.Text = "联系方式";
-            this.contact_title.Width = 94;
+            this.contact_title.Width = 144;
             // 
             // label1
             // 

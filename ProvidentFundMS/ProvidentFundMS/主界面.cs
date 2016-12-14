@@ -36,5 +36,11 @@ namespace ProvidentFundMS
             修改用户名密码 accountMangaForm = new 修改用户名密码();
             accountMangaForm.ShowDialog();
         }
+
+        private void partyMemberBtn_Click(object sender, EventArgs e)
+        {
+            党员信息管理 partyMemberForm = new 党员信息管理();
+            partyMemberForm.ShowDialog();
+        }
     }
 }

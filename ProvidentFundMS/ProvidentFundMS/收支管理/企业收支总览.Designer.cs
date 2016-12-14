@@ -89,12 +89,12 @@
             // fundaccount_title
             // 
             this.fundaccount_title.Text = "公积金账号";
-            this.fundaccount_title.Width = 190;
+            this.fundaccount_title.Width = 209;
             // 
             // remainder_title
             // 
             this.remainder_title.Text = "公积金余额";
-            this.remainder_title.Width = 130;
+            this.remainder_title.Width = 154;
             // 
             // enterprise_id
             // 

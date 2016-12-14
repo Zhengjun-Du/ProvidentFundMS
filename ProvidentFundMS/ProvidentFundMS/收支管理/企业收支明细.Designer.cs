@@ -152,7 +152,7 @@
             // operator_title
             // 
             this.operator_title.Text = "经办人";
-            this.operator_title.Width = 120;
+            this.operator_title.Width = 128;
             // 
             // enterprise_label
             // 

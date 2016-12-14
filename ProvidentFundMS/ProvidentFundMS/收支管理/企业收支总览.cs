@@ -36,7 +36,7 @@ namespace ProvidentFundMS
                 lvi.SubItems.Add(myReader[3].ToString());
                 lvi.SubItems.Add(myReader[6].ToString());
                 lvi.SubItems.Add(myReader[5].ToString());
-                lvi.SubItems.Add(myReader[7].ToString());
+                lvi.SubItems.Add(((float)myReader[7]).ToString("0.00").PadLeft(10, ' '));
                 lvi.SubItems.Add(myReader[0].ToString());
 
                 this.EnterPriseIEListView.Items.Add(lvi);
@@ -77,7 +77,7 @@ namespace ProvidentFundMS
                 lvi.SubItems.Add(myReader[3].ToString());
                 lvi.SubItems.Add(myReader[6].ToString());
                 lvi.SubItems.Add(myReader[5].ToString());
-                lvi.SubItems.Add(myReader[7].ToString());
+                lvi.SubItems.Add(((float)myReader[7]).ToString("0.00").PadLeft(10, ' '));
                 lvi.SubItems.Add(myReader[0].ToString());
 
                 this.EnterPriseIEListView.Items.Add(lvi);

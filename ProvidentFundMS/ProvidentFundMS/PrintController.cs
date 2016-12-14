@@ -15,7 +15,7 @@ namespace ProvidentFundMS
 
         public List<IncomeCostRecord> toPrintIncomeCostRecords = null;
         public int printOrPreview = PRINT_PREVIEW;
-        public int itemsInApage = 3;
+        public int itemsInApage = 20;
         public int lastSeqNum = 0;
 
         public PrintController(List<IncomeCostRecord> toPrintIncomeCostRecords_, int printOrPreview_)

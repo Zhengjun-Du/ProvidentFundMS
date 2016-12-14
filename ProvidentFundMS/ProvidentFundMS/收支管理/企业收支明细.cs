@@ -163,7 +163,8 @@ namespace ProvidentFundMS
             printOrPreview = PRINT;
             currentPrintRowIndex = Convert.ToInt32(ToPrintIncomeCostRecords[0].seqnum);
             PrintDocument myPrintDocument = new PrintDocument();
-            myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("Custum", 500, 300);
+            //myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("Custum", 500, 300);
+            myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("A4", 827, 1170);
             myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
             printDialog.Document = myPrintDocument;
             DialogResult result = printDialog.ShowDialog();
@@ -196,7 +197,8 @@ namespace ProvidentFundMS
             printOrPreview = PRINT_PREVIEW;            
             currentPrintRowIndex = Convert.ToInt32(ToPrintIncomeCostRecords[0].seqnum);
             PrintDocument myPrintDocument = new PrintDocument();
-            myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("Custum", 500, 300);
+           // myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("Custum",500,300);
+            myPrintDocument.DefaultPageSettings.PaperSize = new PaperSize("A4",827, 1170);
             myPrintDocument.PrintPage += new PrintPageEventHandler(this.printDocument2_PrintPage);
             printPreviewDialog.Document = myPrintDocument;
             ((Form)(printPreviewDialog)).WindowState = FormWindowState.Maximized;
