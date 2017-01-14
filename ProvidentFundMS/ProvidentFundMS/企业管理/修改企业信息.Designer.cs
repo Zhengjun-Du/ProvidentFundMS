@@ -46,6 +46,7 @@
             this.confirm_modify_btn = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
             this.delete_btn = new System.Windows.Forms.Button();
+            this.modify_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,8 +76,9 @@
             this.enterprise_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.enterprise_textbox.Location = new System.Drawing.Point(319, 93);
             this.enterprise_textbox.Name = "enterprise_textbox";
+            this.enterprise_textbox.ReadOnly = true;
             this.enterprise_textbox.Size = new System.Drawing.Size(387, 29);
-            this.enterprise_textbox.TabIndex = 4;
+            this.enterprise_textbox.TabIndex = 1;
             this.enterprise_textbox.Text = "青海君东信息科技有限责任公司";
             // 
             // label3
@@ -95,8 +97,9 @@
             this.licence_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.licence_textbox.Location = new System.Drawing.Point(319, 147);
             this.licence_textbox.Name = "licence_textbox";
+            this.licence_textbox.ReadOnly = true;
             this.licence_textbox.Size = new System.Drawing.Size(387, 29);
-            this.licence_textbox.TabIndex = 4;
+            this.licence_textbox.TabIndex = 2;
             this.licence_textbox.Text = "20168888888";
             // 
             // label4
@@ -115,8 +118,9 @@
             this.corporate_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.corporate_textbox.Location = new System.Drawing.Point(319, 201);
             this.corporate_textbox.Name = "corporate_textbox";
+            this.corporate_textbox.ReadOnly = true;
             this.corporate_textbox.Size = new System.Drawing.Size(387, 29);
-            this.corporate_textbox.TabIndex = 4;
+            this.corporate_textbox.TabIndex = 3;
             this.corporate_textbox.Text = "杜正君";
             // 
             // label5
@@ -135,6 +139,7 @@
             this.enterprise_addr_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.enterprise_addr_textbox.Location = new System.Drawing.Point(319, 260);
             this.enterprise_addr_textbox.Name = "enterprise_addr_textbox";
+            this.enterprise_addr_textbox.ReadOnly = true;
             this.enterprise_addr_textbox.Size = new System.Drawing.Size(387, 29);
             this.enterprise_addr_textbox.TabIndex = 4;
             this.enterprise_addr_textbox.Text = "青海省西宁市城北区生物园区";
@@ -155,8 +160,9 @@
             this.fundaccount_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.fundaccount_textbox.Location = new System.Drawing.Point(319, 317);
             this.fundaccount_textbox.Name = "fundaccount_textbox";
+            this.fundaccount_textbox.ReadOnly = true;
             this.fundaccount_textbox.Size = new System.Drawing.Size(387, 29);
-            this.fundaccount_textbox.TabIndex = 4;
+            this.fundaccount_textbox.TabIndex = 5;
             this.fundaccount_textbox.Text = "20166666666XYZW";
             // 
             // label7
@@ -175,8 +181,9 @@
             this.contact_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.contact_textbox.Location = new System.Drawing.Point(319, 380);
             this.contact_textbox.Name = "contact_textbox";
+            this.contact_textbox.ReadOnly = true;
             this.contact_textbox.Size = new System.Drawing.Size(387, 29);
-            this.contact_textbox.TabIndex = 4;
+            this.contact_textbox.TabIndex = 6;
             this.contact_textbox.Text = "13897408428";
             // 
             // label8
@@ -190,10 +197,10 @@
             // confirm_modify_btn
             // 
             this.confirm_modify_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.confirm_modify_btn.Location = new System.Drawing.Point(257, 441);
+            this.confirm_modify_btn.Location = new System.Drawing.Point(257, 443);
             this.confirm_modify_btn.Name = "confirm_modify_btn";
             this.confirm_modify_btn.Size = new System.Drawing.Size(134, 48);
-            this.confirm_modify_btn.TabIndex = 6;
+            this.confirm_modify_btn.TabIndex = 7;
             this.confirm_modify_btn.Text = "确认修改";
             this.confirm_modify_btn.UseVisualStyleBackColor = true;
             this.confirm_modify_btn.Click += new System.EventHandler(this.confirm_modify_btn_Click);
@@ -201,10 +208,10 @@
             // exit_button
             // 
             this.exit_button.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.exit_button.Location = new System.Drawing.Point(581, 441);
+            this.exit_button.Location = new System.Drawing.Point(581, 443);
             this.exit_button.Name = "exit_button";
             this.exit_button.Size = new System.Drawing.Size(125, 48);
-            this.exit_button.TabIndex = 6;
+            this.exit_button.TabIndex = 8;
             this.exit_button.Text = "退出";
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
@@ -212,13 +219,24 @@
             // delete_btn
             // 
             this.delete_btn.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.delete_btn.Location = new System.Drawing.Point(427, 441);
+            this.delete_btn.Location = new System.Drawing.Point(427, 443);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(125, 48);
-            this.delete_btn.TabIndex = 6;
+            this.delete_btn.TabIndex = 7;
             this.delete_btn.Text = "删除";
             this.delete_btn.UseVisualStyleBackColor = true;
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
+            // 
+            // modify_btn
+            // 
+            this.modify_btn.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.modify_btn.Location = new System.Drawing.Point(99, 443);
+            this.modify_btn.Name = "modify_btn";
+            this.modify_btn.Size = new System.Drawing.Size(125, 48);
+            this.modify_btn.TabIndex = 0;
+            this.modify_btn.Text = "修改";
+            this.modify_btn.UseVisualStyleBackColor = true;
+            this.modify_btn.Click += new System.EventHandler(this.modify_btn_Click);
             // 
             // ModifyEnterpriseForm
             // 
@@ -226,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
+            this.Controls.Add(this.modify_btn);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.confirm_modify_btn);
@@ -272,5 +291,6 @@
         private System.Windows.Forms.Button confirm_modify_btn;
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.Button delete_btn;
+        private System.Windows.Forms.Button modify_btn;
     }
 }

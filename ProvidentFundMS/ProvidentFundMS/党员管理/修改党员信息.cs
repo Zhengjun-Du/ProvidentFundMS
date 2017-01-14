@@ -18,6 +18,9 @@ namespace ProvidentFundMS
         {
             InitializeComponent();
 
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+
             this.birth_textbox.Format = DateTimePickerFormat.Custom;
             this.birth_textbox.CustomFormat = "yyyy-MM-dd";
 
@@ -73,6 +76,19 @@ namespace ProvidentFundMS
         private void exit_button_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.name_textbox.ReadOnly = false;
+            this.sex_textbox.ReadOnly = false;
+            this.nationality_textbox.ReadOnly = false;
+            this.education_textbox.ReadOnly = false;
+            //this.workuint__textbox.ReadOnly = false;
+            this.phone_textbox.ReadOnly = false;
+
+            this.name_textbox.Focus();
+
         }
     }
 }

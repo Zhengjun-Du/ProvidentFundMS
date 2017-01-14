@@ -124,9 +124,13 @@ namespace ProvidentFundMS
         {
             if (this.EnterPriseInfoListView.SelectedIndices.Count > 0)
             {
-                ModifyEnterpriseForm modifyEnterpriseForm = new ModifyEnterpriseForm();
-                modifyEnterpriseForm.display_content = this.EnterPriseInfoListView.SelectedItems[0];
-                modifyEnterpriseForm.ShowDialog();
+                //ModifyEnterpriseForm modifyEnterpriseForm = new ModifyEnterpriseForm();
+                //modifyEnterpriseForm.display_content = this.EnterPriseInfoListView.SelectedItems[0];
+                //modifyEnterpriseForm.ShowDialog();
+
+                信息分类 infoCategoryForm = new 信息分类();
+                infoCategoryForm.display_content = this.EnterPriseInfoListView.SelectedItems[0];
+                infoCategoryForm.ShowDialog();
                 UpdateDataOfListView();
             }
         }

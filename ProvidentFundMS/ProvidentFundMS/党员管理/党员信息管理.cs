@@ -16,6 +16,7 @@ namespace ProvidentFundMS
         private String sqlConn = null;
         private OleDbConnection myConn = null;
         private int partMemberID = 0;
+        public string enterprise_name;
 
         public 党员信息管理()
         {
@@ -39,7 +40,7 @@ namespace ProvidentFundMS
             this.partMemberListView.Items.Clear();
 
 
-            String selcet_sql = "select * from partMembers order by ID";
+            String selcet_sql = "select * from partMembers where workUnit = '" + enterprise_name + "' order by ID";
             OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql);
             int i = 1;
             while (myReader.Read())
@@ -75,7 +76,7 @@ namespace ProvidentFundMS
 
         private void addPartMember_btn_Click(object sender, EventArgs e)
         {
-            添加党员 addPartMemberForm = new 添加党员();
+            添加党员 addPartMemberForm = new 添加党员(enterprise_name);
             addPartMemberForm.ShowDialog();
             UpdateDataOfListView();
         }

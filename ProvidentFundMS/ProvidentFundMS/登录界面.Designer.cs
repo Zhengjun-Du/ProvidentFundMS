@@ -100,6 +100,7 @@
             this.password_textbox.PasswordChar = '*';
             this.password_textbox.Size = new System.Drawing.Size(302, 35);
             this.password_textbox.TabIndex = 1;
+            this.password_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_textbox_KeyDown);
             // 
             // login_btn
             // 

@@ -216,6 +216,7 @@
             this.workuint__textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.workuint__textbox.Location = new System.Drawing.Point(343, 368);
             this.workuint__textbox.Name = "workuint__textbox";
+            this.workuint__textbox.ReadOnly = true;
             this.workuint__textbox.Size = new System.Drawing.Size(387, 29);
             this.workuint__textbox.TabIndex = 18;
             // 

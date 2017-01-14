@@ -36,5 +36,14 @@ namespace ProvidentFundMS
         {
             this.Close();
         }
+
+        private void password_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)//如果输入的是回车键  
+            {
+                this.login_btn_Click(sender, e);//触发button事件  
+            }
+        }
     }
 }

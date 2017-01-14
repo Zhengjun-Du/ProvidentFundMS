@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.birth_textbox = new System.Windows.Forms.DateTimePicker();
             this.join_time_textbox = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exit_button
@@ -92,7 +93,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 52);
             this.label1.TabIndex = 11;
-            this.label1.Text = "修改企业信息";
+            this.label1.Text = "修改党员信息";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -108,6 +109,7 @@
             this.phone_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.phone_textbox.Location = new System.Drawing.Point(328, 411);
             this.phone_textbox.Name = "phone_textbox";
+            this.phone_textbox.ReadOnly = true;
             this.phone_textbox.Size = new System.Drawing.Size(387, 29);
             this.phone_textbox.TabIndex = 38;
             // 
@@ -116,6 +118,7 @@
             this.workuint__textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.workuint__textbox.Location = new System.Drawing.Point(328, 364);
             this.workuint__textbox.Name = "workuint__textbox";
+            this.workuint__textbox.ReadOnly = true;
             this.workuint__textbox.Size = new System.Drawing.Size(387, 29);
             this.workuint__textbox.TabIndex = 36;
             // 
@@ -124,6 +127,7 @@
             this.education_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.education_textbox.Location = new System.Drawing.Point(328, 317);
             this.education_textbox.Name = "education_textbox";
+            this.education_textbox.ReadOnly = true;
             this.education_textbox.Size = new System.Drawing.Size(387, 29);
             this.education_textbox.TabIndex = 39;
             // 
@@ -176,6 +180,7 @@
             this.nationality_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nationality_textbox.Location = new System.Drawing.Point(328, 176);
             this.nationality_textbox.Name = "nationality_textbox";
+            this.nationality_textbox.ReadOnly = true;
             this.nationality_textbox.Size = new System.Drawing.Size(387, 29);
             this.nationality_textbox.TabIndex = 30;
             // 
@@ -195,6 +200,7 @@
             this.sex_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sex_textbox.Location = new System.Drawing.Point(328, 129);
             this.sex_textbox.Name = "sex_textbox";
+            this.sex_textbox.ReadOnly = true;
             this.sex_textbox.Size = new System.Drawing.Size(387, 29);
             this.sex_textbox.TabIndex = 25;
             // 
@@ -214,6 +220,7 @@
             this.name_textbox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.name_textbox.Location = new System.Drawing.Point(328, 82);
             this.name_textbox.Name = "name_textbox";
+            this.name_textbox.ReadOnly = true;
             this.name_textbox.Size = new System.Drawing.Size(387, 29);
             this.name_textbox.TabIndex = 24;
             // 
@@ -258,12 +265,24 @@
             this.join_time_textbox.Size = new System.Drawing.Size(387, 29);
             this.join_time_textbox.TabIndex = 40;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 15F);
+            this.button1.Location = new System.Drawing.Point(117, 462);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 48);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "修改";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // 修改党员信息
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(896, 538);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.join_time_textbox);
             this.Controls.Add(this.birth_textbox);
             this.Controls.Add(this.phone_textbox);
@@ -316,6 +335,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker birth_textbox;
         private System.Windows.Forms.DateTimePicker join_time_textbox;
+        private System.Windows.Forms.Button button1;
 
     }
 }

@@ -15,8 +15,9 @@ namespace ProvidentFundMS
     {
         private String sqlConn = null;
         private OleDbConnection myConn = null;
+        public string enterprise_name;
 
-        public 添加党员()
+        public 添加党员(string enterprise_name_)
         {
             InitializeComponent();
 
@@ -24,6 +25,7 @@ namespace ProvidentFundMS
             this.MaximizeBox = false;
             sqlConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source= ../../database/ProvidentFundMS.mdb";
             myConn = new OleDbConnection(sqlConn);
+            this.workuint__textbox.Text = enterprise_name_;
         }
 
         private void addPartMember_btn_Click(object sender, EventArgs e)

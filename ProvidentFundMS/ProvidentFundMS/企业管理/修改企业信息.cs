@@ -70,5 +70,18 @@ namespace ProvidentFundMS
                 this.Close();
             }
         }
+
+        private void modify_btn_Click(object sender, EventArgs e)
+        {
+            enterprise_textbox.ReadOnly = false;
+            licence_textbox.ReadOnly = false;
+            corporate_textbox.ReadOnly = false;
+            enterprise_addr_textbox.ReadOnly = false;
+            fundaccount_textbox.ReadOnly = false;
+            contact_textbox.ReadOnly = false;
+
+            enterprise_textbox.Focus();
+
+        }
     }
 }
