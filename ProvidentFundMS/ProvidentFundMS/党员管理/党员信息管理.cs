@@ -95,9 +95,7 @@ namespace ProvidentFundMS
         private void UpdateDataOfListViewBySearch(string search_str)
         {
             this.partMemberListView.Items.Clear();
-
-
-            String selcet_sql = "select * from partMembers where name like '%" + search_str + "%' order by ID";
+            String selcet_sql = "select * from partMembers where name like '%" + search_str + "%' and workUnit = '" + enterprise_name + "' order by ID";
             OleDbDataReader myReader = new DataAccess().SelectData(selcet_sql);
             int i = 1;
             while (myReader.Read())
