@@ -15,8 +15,9 @@ namespace ProvidentFundMS
 
         public List<IncomeCostRecord> toPrintIncomeCostRecords = null;
         public int printOrPreview = PRINT_PREVIEW;
-        public int itemsInApage = 20;
+        public int itemsInApage = 52;
         public int lastSeqNum = 0;
+        public string enterprise_name;
 
         public PrintController(List<IncomeCostRecord> toPrintIncomeCostRecords_, int printOrPreview_)
         {
@@ -49,14 +50,50 @@ namespace ProvidentFundMS
 
                 if (startSeqNum <= currRecordSeqNum && currRecordSeqNum < endSeqNum)
                 {
-                    int rowIndexOfPage = currRecordSeqNum % itemsInApage;
+                    int rowIndexOfPage = currRecordSeqNum % itemsInApage + 1;
+                    int seqno = Convert.ToInt32(currRecord.seqnum);
 
-                    Font font = new Font(new FontFamily("宋体"), 10);
-                    e.Graphics.DrawString(currRecord.date, font,        Brushes.Black, 10,  10 + 20 * rowIndexOfPage);
-                    e.Graphics.DrawString(currRecord.abstract_, font,   Brushes.Black, 110, 10 + 20 * rowIndexOfPage);
-                    e.Graphics.DrawString(currRecord.income, font,      Brushes.Black, 210, 10 + 20 * rowIndexOfPage);
-                    e.Graphics.DrawString(currRecord.cost, font,        Brushes.Black, 310, 10 + 20 * rowIndexOfPage);
-                    e.Graphics.DrawString(currRecord.remain, font,      Brushes.Black, 410, 10 + 20 * rowIndexOfPage);
+                    if (seqno == startSeqNum)
+                    {
+                        Font title_font = new Font(new FontFamily("宋体"), 12,FontStyle.Bold);
+                        e.Graphics.DrawString(enterprise_name+" 收支明细对账单", title_font, Brushes.Black, 200, 40);
+
+                        Font head_font = new Font(new FontFamily("宋体"), 10, FontStyle.Bold);
+                        e.Graphics.DrawString("序号", head_font, Brushes.Black, 90, 95);
+                        e.Graphics.DrawString("记账日期", head_font, Brushes.Black, 150, 95);
+                        e.Graphics.DrawString("摘    要", head_font, Brushes.Black, 250, 95);
+                        e.Graphics.DrawString("存     入", head_font, Brushes.Black, 355, 95);
+                        e.Graphics.DrawString("支     出", head_font, Brushes.Black, 455, 95);
+                        e.Graphics.DrawString("余     额", head_font, Brushes.Black, 555, 95);
+                        e.Graphics.DrawString("经办人", head_font, Brushes.Black, 660, 95);
+                    }
+
+                   Font font = new Font(new FontFamily("宋体"), 10);
+                   e.Graphics.DrawString((seqno+1).ToString(), font, Brushes.Black, 100, 100 + 20 * rowIndexOfPage);
+                   e.Graphics.DrawString(currRecord.date, font, Brushes.Black, 152, 100 + 20 * rowIndexOfPage);
+                   e.Graphics.DrawString(currRecord.abstract_, font, Brushes.Black, 250, 100 + 20 * rowIndexOfPage);
+                   e.Graphics.DrawString(currRecord.income, font, Brushes.Black, 352, 100 + 20 * rowIndexOfPage);
+                   e.Graphics.DrawString(currRecord.cost, font, Brushes.Black, 452, 100 + 20 * rowIndexOfPage);
+                   e.Graphics.DrawString(currRecord.remain, font, Brushes.Black, 552, 100 + 20 * rowIndexOfPage);
+                   e.Graphics.DrawString(currRecord.operator_, font, Brushes.Black, 660, 100 + 20 * rowIndexOfPage);
+                   
+                    /*
+                     for (int j = 0; j < 50; j++)
+                     {
+                         rowIndexOfPage = j + 1;
+                        
+                         e.Graphics.DrawString(rowIndexOfPage.ToString(), font, Brushes.Black, 100, 100 + 20 * rowIndexOfPage);
+                         e.Graphics.DrawString(currRecord.date, font, Brushes.Black, 152, 100 + 20 * rowIndexOfPage);
+                         e.Graphics.DrawString(currRecord.abstract_, font, Brushes.Black, 250, 100 + 20 * rowIndexOfPage);
+                         e.Graphics.DrawString("999999.00", font, Brushes.Black, 352, 100 + 20 * rowIndexOfPage);
+                         e.Graphics.DrawString("999999.00", font, Brushes.Black, 452, 100 + 20 * rowIndexOfPage);
+                         e.Graphics.DrawString("999999.00", font, Brushes.Black, 552, 100 + 20 * rowIndexOfPage);
+                         e.Graphics.DrawString("杜正君", font, Brushes.Black, 642, 100 + 20 * rowIndexOfPage);
+                     }
+                     return 50;
+                     * 
+                     */ 
+                    
 
                     if (PRINT == printOrPreview)
                     {
@@ -64,6 +101,9 @@ namespace ProvidentFundMS
                         new DataAccess().UpdateData(update_sql);
                     }
                 }
+
+                else
+                    continue;
             }
      
             if (endSeqNum <= lastSeqNum)

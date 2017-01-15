@@ -26,9 +26,9 @@ namespace ProvidentFundMS
 
         private void confirm_add_btn_Click(object sender, EventArgs e)
         {
-            if (this.operator_textbox.Text == "" || this.abstract_comboBox.Text == "")
+            if (this.abstract_comboBox.Text == "")
             {
-                MessageBox.Show("摘要或经办人不能为空，请重新填写！");
+                MessageBox.Show("摘要不能为空，请重新填写！");
                 return;
             }
 
@@ -140,7 +140,5 @@ namespace ProvidentFundMS
             float remain = float.Parse(remain_label.Text) + income - cost;
             this.remain_textbox.Text = remain.ToString();
         }
-
-
     }
 }

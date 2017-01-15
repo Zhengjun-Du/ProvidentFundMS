@@ -135,6 +135,7 @@ namespace ProvidentFundMS
         private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             PrintController printController = new PrintController(ToPrintIncomeCostRecords, printOrPreview);
+            printController.enterprise_name = this.enterprise_label.Text;
             currentPrintRowIndex = printController.OutputIncomeCostRecords(e, currentPrintRowIndex);
         }
 
